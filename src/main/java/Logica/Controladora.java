@@ -5,6 +5,7 @@
 package Logica;
 
 import Persistencia.ControladoraPersistencia;
+import java.util.List;
 
 /**
  *
@@ -24,6 +25,29 @@ public class Controladora {
         prov.setEmailProv(emailProv);
         
         controlpersis.GuardarNuevoProveedor(prov);
+    }
+    
+    public List<Proveedor> traerProveedores () {
+        return controlpersis.traerProveedores();
+    }
+
+    public void borrarProveedor(int idPro) {
+        controlpersis.borrarProveedor(idPro);
+    }
+
+    public Proveedor traerProveedores(int idPro) {
+        return controlpersis.traerProveedores(idPro);
+    }
+
+    public void ModificarProveedor(Proveedor prov,String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv) {
+        
+        prov.setRutProv(rutProv);
+        prov.setNombreProv(nombreProv);
+        prov.setNumeroCtaProv(numeroCtaProv);
+        prov.setCodigoCtaProv(codigoCtaProv);
+        prov.setEmailProv(emailProv);
+        
+        controlpersis.ModificarProveedor(prov);
     }
     
 }
