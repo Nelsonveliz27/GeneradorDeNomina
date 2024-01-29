@@ -2,6 +2,8 @@
 package Interfaz;
 
 import Logica.Controladora;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class ProvNuevoProveedor extends javax.swing.JFrame {
     //Esta clase crea la conexion entra la interfaz y la logica
@@ -166,13 +168,50 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
     private void btnGuardarNuevoProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarNuevoProveedorActionPerformed
         String rutProv = txtRutNuevoProveedor.getText();
         String nombreProv =txtNombreNuevoProveedor.getText();
-        int numeroCtaProv = Integer.parseInt(txtNroctaNuevoProveedor.getText());
-        int codigoCtaProv = Integer.parseInt(txtCodCtaNuevoProveedor.getText());
+        String numeroCtaProvSt = (txtNroctaNuevoProveedor.getText());
+        String codigoCtaProvSt = (txtCodCtaNuevoProveedor.getText());
         String emailProv = txtMailNuevoProveedor.getText();
         
-        control.GuardarNuevoProveedor(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+        try{
+            int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
+        
+            int codigoCtaProv = Integer.parseInt(codigoCtaProvSt);
+              
+        if (rutProv.trim().isEmpty()) {
+            mostrarMensaje("El campo RUT no puede ir vacio", "Error", "Intente de Nuevo");
+        } else if (nombreProv.trim().isEmpty()) {
+            mostrarMensaje("El campo NOMBRE no puede ir vacio", "Error", "Intente de Nuevo");
+        }else if (numeroCtaProvSt.trim().isEmpty()) {                    
+            mostrarMensaje("El campo NUMERO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");                      
+        }else if (codigoCtaProvSt.trim().isEmpty()) {
+                        mostrarMensaje("El campo CODIGO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");
+        } else if (emailProv.trim().isEmpty()) {
+            mostrarMensaje("El campo MAIL no puede ir vacio", "Error", "Intente de Nuevo");
+        } else {
+            
+            control.GuardarNuevoProveedor(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+            
+            mostrarMensaje("Proveedor guardado con exito", "Info", "Provedor guarado");
+        }
+        } catch (NumberFormatException e) {
+        // Manejar el caso en el que la conversión a int no sea exitosa
+        mostrarMensaje("Formato inválido o Vacio en los campos de números de cuenta y/o Codigo de Cuenta", "Error", "Intente de Nuevo");
+    }        
     }//GEN-LAST:event_btnGuardarNuevoProveedorActionPerformed
-
+    
+    
+    public void mostrarMensaje (String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } 
+        else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);        
+    }
     private void btnLimpiarNuevoProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarNuevoProveedorActionPerformed
         txtRutNuevoProveedor.setText("");
         txtNombreNuevoProveedor.setText("");
@@ -201,3 +240,6 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
     private javax.swing.JTextField txtRutNuevoProveedor;
     // End of variables declaration//GEN-END:variables
 }
+
+
+

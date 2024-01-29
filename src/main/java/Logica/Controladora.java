@@ -15,13 +15,13 @@ public class Controladora {
     
     ControladoraPersistencia controlpersis = new ControladoraPersistencia();
 
-    public void GuardarNuevoProveedor(String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv) {
+    public void GuardarNuevoProveedor(String rutProv, String nombreProv, int numeroCtaProvInt, int codigoCtaProvInt, String emailProv) {
         
         Proveedor prov = new Proveedor();
         prov.setRutProv(rutProv);
         prov.setNombreProv(nombreProv);
-        prov.setNumeroCtaProv(numeroCtaProv);
-        prov.setCodigoCtaProv(codigoCtaProv);
+        prov.setNumeroCtaProv(numeroCtaProvInt);
+        prov.setCodigoCtaProv(codigoCtaProvInt);
         prov.setEmailProv(emailProv);
         
         controlpersis.GuardarNuevoProveedor(prov);
