@@ -189,19 +189,43 @@ public class ProvModificar extends javax.swing.JFrame {
         //t
         String rutProv = txtRutModifProveedor.getText();
         String nombreProv =txtNombreModifProveedor.getText();
-        int numeroCtaProv = Integer.parseInt(txtNroctaModifProveedor.getText());
-        int codigoCtaProv = Integer.parseInt(txtCodCtaModifProveedor.getText());
+        String numeroCtaProvSt = (txtNroctaModifProveedor.getText());
+        String codigoCtaProvSt = (txtCodCtaModifProveedor.getText());
         String emailProv = txtMailModifProveedor.getText();
         
-        control.ModificarProveedor(prov, rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+        try{
+            int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
         
-        mostrarMensaje ("Edición realizado correctamente", "Info", "Modificación Exitosa");
+            int codigoCtaProv = Integer.parseInt(codigoCtaProvSt);
+              
+        if (rutProv.trim().isEmpty()) {
+            mostrarMensaje("El campo RUT no puede ir vacio", "Error", "Intente de Nuevo");
+        } else if (nombreProv.trim().isEmpty()) {
+            mostrarMensaje("El campo NOMBRE no puede ir vacio", "Error", "Intente de Nuevo");
+        }else if (numeroCtaProvSt.trim().isEmpty()) {                    
+            mostrarMensaje("El campo NUMERO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");                      
+        }else if (codigoCtaProvSt.trim().isEmpty()) {
+                        mostrarMensaje("El campo CODIGO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");
+        } else if (emailProv.trim().isEmpty()) {
+            mostrarMensaje("El campo MAIL no puede ir vacio", "Error", "Intente de Nuevo");
+        } else {
+            
+                control.ModificarProveedor(prov, rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
         
-        ProvConsEdicElimProveedor provConEdiElim = new ProvConsEdicElimProveedor();
-        provConEdiElim.setVisible(true);
-        provConEdiElim.setLocationRelativeTo(null);
+                mostrarMensaje ("Edición realizado correctamente", "Info", "Modificación Exitosa");
         
-        this.dispose();
+                ProvConsEdicElimProveedor provConEdiElim = new ProvConsEdicElimProveedor();
+                provConEdiElim.setVisible(true);
+                provConEdiElim.setLocationRelativeTo(null);
+                
+                this.dispose();
+                }
+        } catch (NumberFormatException e) {
+        // Manejar el caso en el que la conversión a int no sea exitosa
+        mostrarMensaje("Formato inválido o Vacio en los campos de números de cuenta y/o Codigo de Cuenta", "Error", "Intente de Nuevo");
+        
+        } 
+        
     }//GEN-LAST:event_btnModificarProveedorActionPerformed
 
     private void btnLimpiarNuevoProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarNuevoProveedorActionPerformed

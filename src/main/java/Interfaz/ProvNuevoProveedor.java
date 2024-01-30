@@ -192,7 +192,14 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
             control.GuardarNuevoProveedor(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
             
             mostrarMensaje("Proveedor guardado con exito", "Info", "Provedor guarado");
-        }
+            
+            //control.limpiar(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+            txtRutNuevoProveedor.setText("");
+            txtNombreNuevoProveedor.setText("");
+            txtNroctaNuevoProveedor.setText("");
+            txtCodCtaNuevoProveedor.setText("");
+            txtMailNuevoProveedor.setText("");
+            }
         } catch (NumberFormatException e) {
         // Manejar el caso en el que la conversión a int no sea exitosa
         mostrarMensaje("Formato inválido o Vacio en los campos de números de cuenta y/o Codigo de Cuenta", "Error", "Intente de Nuevo");
