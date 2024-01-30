@@ -14,10 +14,13 @@ Interfaz\ProvModificar.class
 Interfaz\ProvNuevoProveedor$2.class
 com\mycompany\nominakovacs\NominaKovacs.class
 Interfaz\PagInicial$3.class
+Interfaz\PortalNominas.class
 Interfaz\PortalProveedores$1.class
+Interfaz\ProvConsEdicElimProveedor$5.class
 Interfaz\PagInicial.class
 Interfaz\PortalProveedores$3.class
 Interfaz\ProvModificar$2.class
+ExportarExcell\ExportarJtabletoExcell.class
 Interfaz\ProvNuevoProveedor$1.class
 Logica\Proveedor.class
 Interfaz\ProvConsEdicElimProveedor.class

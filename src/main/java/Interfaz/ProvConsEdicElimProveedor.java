@@ -1,7 +1,9 @@
 package Interfaz;
 
+import ExportarExcell.ExportarJtabletoExcell;
 import Logica.Controladora;
 import Logica.Proveedor;
+import java.io.IOException;
 import java.util.List;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
@@ -34,6 +36,7 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
         tableProveedores = new javax.swing.JTable();
         btnModificarProveedor = new javax.swing.JButton();
         btnEliminarProveedor = new javax.swing.JButton();
+        btnExportarExcell = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -75,6 +78,13 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
             }
         });
 
+        btnExportarExcell.setText("ExportarExcell");
+        btnExportarExcell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportarExcellActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -83,9 +93,10 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 920, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnModificarProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                    .addComponent(btnEliminarProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                    .addComponent(btnExportarExcell, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(24, 24, 24))
         );
         jPanel2Layout.setVerticalGroup(
@@ -99,7 +110,9 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
                         .addGap(19, 19, 19)
                         .addComponent(btnModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnEliminarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnExportarExcell, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -191,6 +204,17 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
             mostrarMensaje("la tabla esta vacia, no hay registro para modificar", "Error", "Error al modificar");
         }
     }//GEN-LAST:event_btnModificarProveedorActionPerformed
+
+    private void btnExportarExcellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarExcellActionPerformed
+        ExportarJtabletoExcell obj;
+
+        try {
+            obj = new ExportarJtabletoExcell();
+            obj.exportarExcel(tableProveedores);
+        } catch (IOException ex) {
+            System.out.println("Error: " + ex);
+        }
+    }//GEN-LAST:event_btnExportarExcellActionPerformed
     
     public void mostrarMensaje (String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
@@ -208,6 +232,7 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEliminarProveedor;
+    private javax.swing.JToggleButton btnExportarExcell;
     private javax.swing.JButton btnModificarProveedor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
