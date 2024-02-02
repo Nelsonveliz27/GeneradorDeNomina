@@ -4,7 +4,8 @@
  */
 package Interfaz;
 
-import Logica.Proveedor;
+import Logica.Nomina;
+
 
 /**
  *
@@ -693,7 +694,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField30ActionPerformed
 
     private void btnAgregarFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarFilaActionPerformed
-    
+       Nomina filaNomina = new Nomina();
 
         
     }//GEN-LAST:event_btnAgregarFilaActionPerformed

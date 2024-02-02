@@ -17,6 +17,7 @@ Interfaz\NomCrearNomina$13.class
 Interfaz\PortalNominas$2.class
 Interfaz\NomCrearNomina$21.class
 Interfaz\PagInicial.class
+Logica\Nomina.class
 Interfaz\NomCrearNomina$8.class
 Interfaz\NomCrearNomina$10.class
 Logica\Proveedor.class
@@ -41,6 +42,7 @@ Persistencia\ControladoraPersistencia.class
 Interfaz\PortalProveedores.class
 Interfaz\NomCrearNomina.class
 Interfaz\NomCrearNomina$17.class
+Interfaz\NomCrearNomina$24.class
 com\mycompany\nominakovacs\NominaKovacs.class
 Interfaz\PagInicial$3.class
 Interfaz\PortalNominas.class

@@ -9,36 +9,42 @@ package Logica;
  * @author nvelizl
  */
 public class Nomina {
-    String rutProvNom;
-    String nombreProvNom;
-    int modalidadProvNom;
-    int nroCtaProvNom;
-    int codCtaProvNom;
-    int numeroDoc1Nom;
-    Double montoDoc1Nom;
-    int numeroDoc2Nom;
-    Double montoDoc2Nom;
-    int numeroDoc3Nom;
-    Double montoDoc3Nom;
-    int numeroDoc4Nom;
-    Double montoDoc4Nom;
-    int numeroDoc5Nom;
-    Double montoDoc5Nom;
+    
+    public String rutProvNom;
+    public String nombreProvNom;
+    public int modalidadProvNom;
+    public int nroCtaProvNom;
+    public int codCtaProvNom;
+    public int numeroDoc1Nom;
+    public Double montoDoc1Nom;
+    public int numeroDoc2Nom;
+    public Double montoDoc2Nom;
+    public int numeroDoc3Nom;
+    public Double montoDoc3Nom;
+    public int numeroDoc4Nom;
+    public Double montoDoc4Nom;
+    public int numeroDoc5Nom;
+    public Double montoDoc5Nom;
     int numeroDoc6Nom;
-    Double montoDoc6Nom;
-    int numeroDoc7Nom;
-    Double montoDoc7Nom;
-    int numeroDoc8Nom;
-    Double montoDoc8Nom;
-    int numeroDoc9Nom;
-    Double montoDoc9Nom;
-    int numeroDoc10Nom;
-    Double montoDoc10Nom;
-    int numeroDoc11Nom;
-    Double montoDoc11Nom;
-    Double totalNomina;
+    public Double montoDoc6Nom;
+    public int numeroDoc7Nom;
+    public Double montoDoc7Nom;
+    public int numeroDoc8Nom;
+    public Double montoDoc8Nom;
+    public int numeroDoc9Nom;
+    public Double montoDoc9Nom;
+    public int numeroDoc10Nom;
+    public Double montoDoc10Nom;
+    public int numeroDoc11Nom;
+    public Double montoDoc11Nom;
+    public Double totalNomina;
+    public String emailProvNom;
+    public String glosaNom;
 
-    public Nomina(String rutProvNom, String nombreProvNom, int modalidadProvNom, int nroCtaProvNom, int codCtaProvNom, int numeroDoc1Nom, Double montoDoc1Nom, int numeroDoc2Nom, Double montoDoc2Nom, int numeroDoc3Nom, Double montoDoc3Nom, int numeroDoc4Nom, Double montoDoc4Nom, int numeroDoc5Nom, Double montoDoc5Nom, int numeroDoc6Nom, Double montoDoc6Nom, int numeroDoc7Nom, Double montoDoc7Nom, int numeroDoc8Nom, Double montoDoc8Nom, int numeroDoc9Nom, Double montoDoc9Nom, int numeroDoc10Nom, Double montoDoc10Nom, int numeroDoc11Nom, Double montoDoc11Nom, Double totalNomina) {
+    public Nomina() {
+    }
+
+    public Nomina(String rutProvNom, String nombreProvNom, int modalidadProvNom, int nroCtaProvNom, int codCtaProvNom, int numeroDoc1Nom, Double montoDoc1Nom, int numeroDoc2Nom, Double montoDoc2Nom, int numeroDoc3Nom, Double montoDoc3Nom, int numeroDoc4Nom, Double montoDoc4Nom, int numeroDoc5Nom, Double montoDoc5Nom, int numeroDoc6Nom, Double montoDoc6Nom, int numeroDoc7Nom, Double montoDoc7Nom, int numeroDoc8Nom, Double montoDoc8Nom, int numeroDoc9Nom, Double montoDoc9Nom, int numeroDoc10Nom, Double montoDoc10Nom, int numeroDoc11Nom, Double montoDoc11Nom, Double totalNomina, String emailProvNom, String glosaNom) {
         this.rutProvNom = rutProvNom;
         this.nombreProvNom = nombreProvNom;
         this.modalidadProvNom = modalidadProvNom;
@@ -67,6 +73,8 @@ public class Nomina {
         this.numeroDoc11Nom = numeroDoc11Nom;
         this.montoDoc11Nom = montoDoc11Nom;
         this.totalNomina = totalNomina;
+        this.emailProvNom = emailProvNom;
+        this.glosaNom = glosaNom;
     }
 
     public String getRutProvNom() {
@@ -292,6 +300,23 @@ public class Nomina {
     public void setTotalNomina(Double totalNomina) {
         this.totalNomina = totalNomina;
     }
+
+    public String getEmailProvNom() {
+        return emailProvNom;
+    }
+
+    public void setEmailProvNom(String emailProvNom) {
+        this.emailProvNom = emailProvNom;
+    }
+
+    public String getGlosaNom() {
+        return glosaNom;
+    }
+
+    public void setGlosaNom(String glosaNom) {
+        this.glosaNom = glosaNom;
+    }
+    
     
     
 }
