@@ -52,8 +52,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
         txtRUT = new javax.swing.JTextField();
         txtNombreProvNomina = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        txtNumeroCuwentaProvNom = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        txtNumeroCuentaProvNom = new javax.swing.JTextField();
+        txtCodigoCuentaProvNom = new javax.swing.JTextField();
         txtEmailProvNomina = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -545,7 +545,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNumeroCuwentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanelLayout.createSequentialGroup()
                                 .addComponent(txtRUT, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -563,7 +563,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtEmailProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
@@ -577,7 +577,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtEmailProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -601,7 +601,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(txtNumeroCuwentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(12, 12, 12)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -743,7 +743,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
             if(rs.next()) {
                 txtNombreProvNomina.setText(String.valueOf(rs.getString("NOMBREPROV")));
                 txtEmailProvNomina.setText(String.valueOf(rs.getString("EMAILPROV")));
-                txtNumeroCuwentaProvNom.setText(String.valueOf(rs.getInt("NUMEROCTAPROV")));
+                txtNumeroCuentaProvNom.setText(String.valueOf(rs.getInt("NUMEROCTAPROV")));
+                txtCodigoCuentaProvNom.setText(String.valueOf(rs.getInt("CODIGOCTAPROV")));
                 
             }else{
                 JOptionPane.showMessageDialog(null, "No se encuentra el proveedor");
@@ -815,14 +816,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField51;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField txtCodigoCuentaProvNom;
     private javax.swing.JTextField txtEmailProvNomina;
     private javax.swing.JTextField txtNombreProvNomina;
-    private javax.swing.JTextField txtNumeroCuwentaProvNom;
+    private javax.swing.JTextField txtNumeroCuentaProvNom;
     private javax.swing.JTextField txtRUT;
     // End of variables declaration//GEN-END:variables
 
