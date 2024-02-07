@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -44,55 +44,68 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel8" min="-2" pref="106" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField3" min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="txtNumeroCuentaProvNom" min="-2" pref="373" max="-2" attributes="0"/>
-                              <Component id="txtNombreProvNomina" min="-2" pref="373" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel8" min="-2" pref="106" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <Component id="txtRUT" min="-2" pref="148" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="jLabel5" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtOpNomina" min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Component id="txtNumeroCuentaProvNom" min="-2" pref="373" max="-2" attributes="0"/>
+                                      <Component id="txtNombreProvNomina" min="-2" pref="373" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="txtRutNomina" min="-2" pref="148" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                          <Component id="jButton1" min="-2" pref="103" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel7" min="-2" pref="95" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" pref="81" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel7" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" min="-2" pref="81" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" pref="94" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="txtCodigoCuentaProvNom" min="-2" pref="148" max="-2" attributes="0"/>
+                                  <EmptySpace pref="176" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="txtGlosaNomina" max="32767" attributes="0"/>
+                              <Component id="txtEmailProvNomina" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="94" max="-2" attributes="0"/>
+                          <EmptySpace pref="17" max="32767" attributes="0"/>
+                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jTextField7" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="txtCodigoCuentaProvNom" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                      <Component id="txtEmailProvNomina" alignment="0" min="-2" pref="304" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="17" max="32767" attributes="0"/>
-                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnAgregarFila" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" min="-2" pref="1028" max="-2" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -106,13 +119,13 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="txtEmailProvNomina" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtGlosaNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtRUT" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtRutNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -123,7 +136,7 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtOpNomina" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -136,9 +149,13 @@
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="266" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" pref="123" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                  <Component id="btnAgregarFila" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="265" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -179,11 +196,11 @@
             <Property name="text" type="java.lang.String" value="GLOSA"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtRUT">
+        <Component class="javax.swing.JTextField" name="txtRutNomina">
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombreProvNomina">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField3">
+        <Component class="javax.swing.JTextField" name="txtOpNomina">
         </Component>
         <Component class="javax.swing.JTextField" name="txtNumeroCuentaProvNom">
         </Component>
@@ -191,7 +208,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtEmailProvNomina">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
+        <Component class="javax.swing.JTextField" name="txtGlosaNomina">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
@@ -205,139 +222,127 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jTextField8" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="txtMontoTotalNomina" min="-2" pref="80" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="963" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel49" min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel51" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel48" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel47" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabel44" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel43" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jLabel46" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      <Component id="jLabel45" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel42" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel49" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel51" min="-2" pref="51" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel40" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                      <Component id="jLabel39" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel41" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel38" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel36" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Component id="jLabel37" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel35" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Component id="jLabel34" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel33" min="-2" pref="64" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jLabel31" min="-2" pref="67" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jLabel32" min="-2" pref="51" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="jLabel30" min="-2" pref="51" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnAgregarFila" min="-2" pref="135" max="-2" attributes="0"/>
+                              <Component id="jLabel48" min="-2" pref="51" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="jLabel47" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jLabel44" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jLabel43" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="jLabel46" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="jLabel45" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel42" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel40" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="jLabel39" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel41" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel38" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel36" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="jLabel37" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel35" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="jLabel34" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel33" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel31" min="-2" pref="67" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel32" min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="jLabel30" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField50" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc1Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField49" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc2Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField46" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc3Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField45" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDo41Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField42" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc5Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField41" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc6Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField38" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc7Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField37" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc8Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField34" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc9Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField33" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc10Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField30" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtMontoDoc11Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel50" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTextField51" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc1Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField48" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc2Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField47" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc3Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField44" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc4Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField43" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc5Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField40" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc6Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField39" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc7Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jTextField36" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc8Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField35" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc9Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField32" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc10Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField31" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="txtDoc11Nomina" min="-2" pref="61" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="129" max="32767" attributes="0"/>
@@ -377,46 +382,42 @@
                           <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="125" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="btnAgregarFila" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
+                      <Component id="txtMontoTotalNomina" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField51" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField48" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField47" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField44" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField36" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField35" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField32" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc1Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc2Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc3Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc4Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc5Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc6Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc7Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc8Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc9Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtDoc11Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                           <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField50" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField49" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField46" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField45" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField41" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField37" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField34" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField30" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc1Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc2Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc3Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDo41Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc5Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc6Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc7Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc8Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc9Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc10Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMontoDoc11Nomina" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <EmptySpace pref="27" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -428,9 +429,9 @@
                 <Property name="text" type="java.lang.String" value="DOC. 11"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField30">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc11Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField30ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc11NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel31">
@@ -438,14 +439,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 11"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField31">
+            <Component class="javax.swing.JTextField" name="txtDoc11Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField31ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc11NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField32">
+            <Component class="javax.swing.JTextField" name="txtDoc10Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField32ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc10NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel32">
@@ -458,14 +459,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 10"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField33">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc10Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField33ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc10NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField34">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc9Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField34ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc9NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel34">
@@ -473,9 +474,9 @@
                 <Property name="text" type="java.lang.String" value="VALOR 9"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField35">
+            <Component class="javax.swing.JTextField" name="txtDoc9Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField35ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc9NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel35">
@@ -488,9 +489,9 @@
                 <Property name="text" type="java.lang.String" value="DOC. 8"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField36">
+            <Component class="javax.swing.JTextField" name="txtDoc8Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField36ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc8NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel37">
@@ -498,14 +499,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 8"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField37">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc8Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField37ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc8NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField38">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc7Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField38ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc7NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel38">
@@ -513,9 +514,9 @@
                 <Property name="text" type="java.lang.String" value="VALOR 7"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField39">
+            <Component class="javax.swing.JTextField" name="txtDoc7Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField39ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc7NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel39">
@@ -528,9 +529,9 @@
                 <Property name="text" type="java.lang.String" value="DOC. 6"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField40">
+            <Component class="javax.swing.JTextField" name="txtDoc6Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField40ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc6NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel41">
@@ -538,14 +539,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 6"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField41">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc6Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField41ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc6NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField42">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc5Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField42ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc5NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel42">
@@ -553,9 +554,9 @@
                 <Property name="text" type="java.lang.String" value="VALOR 5"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField43">
+            <Component class="javax.swing.JTextField" name="txtDoc5Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField43ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc5NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel43">
@@ -568,9 +569,9 @@
                 <Property name="text" type="java.lang.String" value="DOC. 4"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField44">
+            <Component class="javax.swing.JTextField" name="txtDoc4Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField44ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc4NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel45">
@@ -578,14 +579,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 4"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField45">
+            <Component class="javax.swing.JTextField" name="txtMontoDo41Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField45ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDo41NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField46">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc3Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField46ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc3NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel46">
@@ -593,9 +594,9 @@
                 <Property name="text" type="java.lang.String" value="VALOR 3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField47">
+            <Component class="javax.swing.JTextField" name="txtDoc3Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField47ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc3NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel47">
@@ -608,9 +609,9 @@
                 <Property name="text" type="java.lang.String" value="DOC. 2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField48">
+            <Component class="javax.swing.JTextField" name="txtDoc2Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField48ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc2NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel49">
@@ -618,14 +619,14 @@
                 <Property name="text" type="java.lang.String" value="VALOR 2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField49">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc2Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField49ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc2NominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField50">
+            <Component class="javax.swing.JTextField" name="txtMontoDoc1Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField50ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc1NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel50">
@@ -633,9 +634,9 @@
                 <Property name="text" type="java.lang.String" value="VALOR 1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField51">
+            <Component class="javax.swing.JTextField" name="txtDoc1Nomina">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField51ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc1NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel51">
@@ -643,54 +644,12 @@
                 <Property name="text" type="java.lang.String" value="DOC. 1"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-              <AuxValues>
-                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-              </AuxValues>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-              <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
-                  <Properties>
-                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="17" rowCount="4">
-                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 5" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 6" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 7" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 8" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 9" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 10" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 11" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 12" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 13" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 14" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 15" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 16" type="java.lang.Object"/>
-                        <Column editable="true" title="Title 17" type="java.lang.Object"/>
-                      </Table>
-                    </Property>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
                 <Property name="text" type="java.lang.String" value="TOTAL"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
-            </Component>
-            <Component class="javax.swing.JButton" name="btnAgregarFila">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="AGREGAR FILA"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarFilaActionPerformed"/>
-              </Events>
+            <Component class="javax.swing.JTextField" name="txtMontoTotalNomina">
             </Component>
           </SubComponents>
         </Container>
@@ -702,6 +661,36 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JButton" name="btnAgregarFila">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="AGREGAR FILA"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarFilaActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="tblDatosNomina">
+              <Properties>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="4" rowCount="4">
+                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  </Table>
+                </Property>
+                <Property name="autoResizeMode" type="int" value="4"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

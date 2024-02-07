@@ -10,6 +10,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
     Controladora control = new Controladora();
     public ProvNuevoProveedor() {
         initComponents();
+      
     }
 
     /**

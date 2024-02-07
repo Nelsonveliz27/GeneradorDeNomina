@@ -25,7 +25,7 @@ public class Nomina {
     public Double montoDoc4Nom;
     public int numeroDoc5Nom;
     public Double montoDoc5Nom;
-    int numeroDoc6Nom;
+    public int numeroDoc6Nom;
     public Double montoDoc6Nom;
     public int numeroDoc7Nom;
     public Double montoDoc7Nom;
@@ -76,6 +76,7 @@ public class Nomina {
         this.emailProvNom = emailProvNom;
         this.glosaNom = glosaNom;
     }
+
 
     public String getRutProvNom() {
         return rutProvNom;

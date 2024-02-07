@@ -37,6 +37,7 @@ public class PagInicial extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         btnProveedores = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        ljlLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +79,9 @@ public class PagInicial extends javax.swing.JFrame {
         jLabel1.setText("PORTAL DE NOMINAS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 345, 56));
 
+        ljlLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/imagenPrueba.png"))); // NOI18N
+        jPanel1.add(ljlLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 160, 60));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -116,5 +120,6 @@ public class PagInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel ljlLogo;
     // End of variables declaration//GEN-END:variables
 }
