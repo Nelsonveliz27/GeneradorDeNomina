@@ -5,6 +5,8 @@
 package Interfaz;
 
 
+
+import static java.lang.Integer.parseInt;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,11 +23,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     PreparedStatement ps;
     ResultSet rs;
-    
-      
-    public NomCrearNomina() {
-        initComponents();
-          DefaultTableModel modeloTable = new DefaultTableModel() {
+     DefaultTableModel modeloTableNomina = new DefaultTableModel() {
             
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -34,7 +32,11 @@ public class NomCrearNomina extends javax.swing.JFrame {
             
             
         };
-        //Aca se coloca titulo a las columnas
+      
+    public NomCrearNomina() {
+        initComponents();
+         
+        
         
         String titulosTabNomina[] = {"Rut Beneficiario", "Nombre Beneficiario", "Cod. Modalidad", 
             "Cta Abono", "Cod. Banco", "N Factura 1", "Monto 1", "N Factura 2", "Monto 2",
@@ -43,8 +45,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
             "N Factura 9", "Monto 9", "N Factura 10", "Monto 10", "N Factura 11", "Monto 11",
             "Monto Total","Mail Beneficiario","Glosa"};
         
-            modeloTable.setColumnIdentifiers(titulosTabNomina);
-            tblDatosNomina.setModel(modeloTable);
+            modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
+            tblDatosNomina.setModel(modeloTableNomina);
+        
         
     }
 
@@ -735,8 +738,96 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_txtMontoDoc11NominaActionPerformed
 
     private void btnAgregarFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarFilaActionPerformed
-
+    String rutProvNom = txtRutNomina.getText(); 
+    String nombreProvNom = txtNombreProvNomina.getText();
+    int modalidadProvNom = parseInt(txtOpNomina.getText());
+    int nroCtaProvNom = parseInt(txtNumeroCuentaProvNom.getText());
+    int codCtaProvNom =  parseInt(txtCodigoCuentaProvNom.getText());
+    String numeroDoc1Nom = txtDoc1Nomina.getText();
+    Double montoDoc1Nom  =  Double.valueOf(txtDoc1Nomina.getText());
+    String numeroDoc2Nom  =  txtDoc2Nomina.getText();
+    Double montoDoc2Nom =   Double.valueOf(txtDoc2Nomina.getText());
+    String numeroDoc3Nom =   txtDoc3Nomina.getText();
+    Double montoDoc3Nom =  Double.valueOf(txtDoc3Nomina.getText());
+    String numeroDoc4Nom =  txtDoc4Nomina.getText();
+    Double montoDoc4Nom  = Double.valueOf(txtDoc4Nomina.getText());
+    String numeroDoc5Nom  = txtDoc5Nomina.getText();
+    Double montoDoc5Nom =  Double.valueOf(txtDoc5Nomina.getText());
+    String numeroDoc6Nom  =  txtDoc6Nomina.getText();
+    Double montoDoc6Nom =  Double.valueOf(txtDoc6Nomina.getText());
+    String numeroDoc7Nom =  txtDoc7Nomina.getText();
+    Double montoDoc7Nom =  Double.valueOf(txtDoc7Nomina.getText());
+    String numeroDoc8Nom =  txtDoc8Nomina.getText();
+    Double montoDoc8Nom  =  Double.valueOf(txtDoc8Nomina.getText());
+    String numeroDoc9Nom =  txtDoc9Nomina.getText();
+    Double montoDoc9Nom  =  Double.valueOf(txtDoc9Nomina.getText());
+    String numeroDoc10Nom  =  txtDoc10Nomina.getText();
+    Double montoDoc10Nom =   Double.valueOf(txtDoc10Nomina.getText());
+    String numeroDoc11Nom  =  txtDoc11Nomina.getText();
+    Double montoDoc11Nom =   Double.valueOf(txtDoc11Nomina.getText());
+    Double totalNomina =   Double.valueOf(txtMontoTotalNomina.getText());
+    String emailProvNom  =  txtEmailProvNomina.getText();
+    String glosaNom  =  txtGlosaNomina.getText();
+    
+    //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y 
+    //le asigno una caja de texto a cada columna, de acuerdo a los datos que necesita.
+    
+    //Se crea una matriz de tipo object para que registro distintos tipos de datos.
+    Object []  datosFila =new Object[30];
+    
+    datosFila[0] = rutProvNom;
+    datosFila[1] = nombreProvNom;
+    datosFila[2] = modalidadProvNom;
+    datosFila[3] = nroCtaProvNom;
+    datosFila[4] = codCtaProvNom;
+    datosFila[5] = numeroDoc1Nom;
+    datosFila[6] = montoDoc1Nom;
+    datosFila[7] = numeroDoc2Nom;
+    datosFila[8] = montoDoc2Nom;
+    datosFila[9] = numeroDoc3Nom;
+    datosFila[10] = montoDoc3Nom;
+    datosFila[11] = numeroDoc4Nom;
+    datosFila[12] = montoDoc4Nom;
+    datosFila[13] = numeroDoc5Nom;
+    datosFila[14] = montoDoc5Nom;
+    datosFila[15] = numeroDoc6Nom;
+    datosFila[16] = montoDoc6Nom;
+    datosFila[17] = numeroDoc7Nom;
+    datosFila[18] = montoDoc7Nom;
+    datosFila[19] = numeroDoc8Nom;
+    datosFila[20] = montoDoc8Nom;
+    datosFila[21] = numeroDoc9Nom;
+    datosFila[22] = montoDoc9Nom;
+    datosFila[23] = numeroDoc10Nom;
+    datosFila[24] = montoDoc10Nom;
+    datosFila[25] = numeroDoc11Nom;
+    datosFila[26] = montoDoc11Nom;
+    datosFila[27] = totalNomina;
+    datosFila[28] = emailProvNom;
+    datosFila[29] = glosaNom;
+    
+    //llamo al objeto de la clase default y al metodo de addrow y le asigno el atributo datos fila.
+    modeloTableNomina.addRow(datosFila);
         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+    
     }//GEN-LAST:event_btnAgregarFilaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
