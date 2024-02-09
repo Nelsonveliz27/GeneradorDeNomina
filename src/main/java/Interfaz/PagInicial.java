@@ -4,6 +4,9 @@
  */
 package Interfaz;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+
 
 /**
  *
@@ -15,7 +18,9 @@ public class PagInicial extends javax.swing.JFrame {
         
         initComponents();
         this.setTitle("PORTAL GENERADOR DE NOMINAS KOVACS, SPA.");
-        
+        Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/chevrolet.png"));
+        this.setIconImage(icono);
+        this.setLocationRelativeTo(null);
      
     }    
        

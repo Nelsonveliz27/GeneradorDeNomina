@@ -1,5 +1,6 @@
 Interfaz\NomCrearNomina$19.class
 Interfaz\NomCrearNomina$22.class
+Interfaz\NomCrearNomina$29.class
 Interfaz\NomCrearNomina$5.class
 Interfaz\NomCrearNomina$12.class
 Interfaz\PagInicial$1.class
@@ -31,6 +32,7 @@ Interfaz\ProvModificar$1.class
 Interfaz\PortalProveedores$2.class
 Interfaz\ProvNuevoProveedor$3.class
 exceptions\PreexistingEntityException.class
+Interfaz\NomCrearNomina$28.class
 Logica\Proveedor_.class
 Persistencia\ProveedorJpaController.class
 Interfaz\ProvNuevoProveedor.class
