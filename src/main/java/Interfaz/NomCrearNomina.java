@@ -6,6 +6,9 @@ package Interfaz;
 
 
 
+import ExportarExcell.ExportarJtabletoExcell;
+import java.io.IOException;
+
 import static java.lang.Integer.parseInt;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,7 +26,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     PreparedStatement ps;
     ResultSet rs;
-     DefaultTableModel modeloTableNomina = new DefaultTableModel() {
+    DefaultTableModel modeloTableNomina = new DefaultTableModel() {
             
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -34,20 +37,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         };
       
     public NomCrearNomina() {
-        initComponents();
-         
-        
-        
-        String titulosTabNomina[] = {"Rut Beneficiario", "Nombre Beneficiario", "Cod. Modalidad", 
-            "Cta Abono", "Cod. Banco", "N Factura 1", "Monto 1", "N Factura 2", "Monto 2",
-            "N Factura 3", "Monto 3", "N Factura 4", "Monto 4", "N Factura 5", "Monto 5",
-            "N Factura 6", "Monto 6", "N Factura 7", "Monto 7", "N Factura 8", "Monto 8",
-            "N Factura 9", "Monto 9", "N Factura 10", "Monto 10", "N Factura 11", "Monto 11",
-            "Monto Total","Mail Beneficiario","Glosa"};
-        
-            modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
-            tblDatosNomina.setModel(modeloTableNomina);
-        
+        initComponents();   
         
     }
 
@@ -127,8 +117,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
         btnAgregarFila = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDatosNomina = new javax.swing.JTable();
+        btnExportarAExcell = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -534,7 +530,19 @@ public class NomCrearNomina extends javax.swing.JFrame {
             }
         ));
         tblDatosNomina.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        tblDatosNomina.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                tblDatosNominaPropertyChange(evt);
+            }
+        });
         jScrollPane2.setViewportView(tblDatosNomina);
+
+        btnExportarAExcell.setText("EXPORTAR A EXCELL");
+        btnExportarAExcell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExportarAExcellActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
@@ -583,9 +591,13 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addGap(59, 59, 59))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1028, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1028, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnExportarAExcell, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(206, 206, 206))))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -625,7 +637,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(86, 86, 86)
-                .addComponent(btnAgregarFila)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAgregarFila)
+                    .addComponent(btnExportarAExcell))
                 .addContainerGap(265, Short.MAX_VALUE))
         );
 
@@ -808,25 +822,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     //llamo al objeto de la clase default y al metodo de addrow y le asigno el atributo datos fila.
     modeloTableNomina.addRow(datosFila);
-        
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+     
     
     }//GEN-LAST:event_btnAgregarFilaActionPerformed
 
@@ -862,10 +858,32 @@ public class NomCrearNomina extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnExportarAExcellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarAExcellActionPerformed
+        ExportarJtabletoExcell obj;
+
+        try {
+            obj = new ExportarJtabletoExcell();
+            obj.exportarExcel(modeloTableNomina);
+        } catch (IOException ex) {
+            System.out.println("Error: " + ex);
+        }
+
+        
+    }//GEN-LAST:event_btnExportarAExcellActionPerformed
+
+    private void tblDatosNominaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tblDatosNominaPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tblDatosNominaPropertyChange
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+      cargarTabla();
+    }//GEN-LAST:event_formWindowOpened
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarFila;
+    private javax.swing.JButton btnExportarAExcell;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -933,6 +951,25 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JTextField txtOpNomina;
     private javax.swing.JTextField txtRutNomina;
     // End of variables declaration//GEN-END:variables
+    
+    /**
+     *
+     */
+    public void cargarTabla() {
+       //Aqui se hace que la tabla no sea editable
+      
+       
+       String titulosTabNomina[] = {"Rut Beneficiario", "Nombre Beneficiario", "Cod. Modalidad", 
+            "Cta Abono", "Cod. Banco", "N Factura 1", "Monto 1", "N Factura 2", "Monto 2",
+            "N Factura 3", "Monto 3", "N Factura 4", "Monto 4", "N Factura 5", "Monto 5",
+            "N Factura 6", "Monto 6", "N Factura 7", "Monto 7", "N Factura 8", "Monto 8",
+            "N Factura 9", "Monto 9", "N Factura 10", "Monto 10", "N Factura 11", "Monto 11",
+            "Monto Total","Mail Beneficiario","Glosa"};
+        
+            modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
+            tblDatosNomina.setModel(modeloTableNomina);
 
+        
+    }
    
 }

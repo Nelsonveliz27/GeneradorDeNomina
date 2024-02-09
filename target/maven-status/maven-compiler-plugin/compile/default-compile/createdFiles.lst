@@ -36,6 +36,7 @@ Persistencia\ProveedorJpaController.class
 Interfaz\ProvNuevoProveedor.class
 Logica\Controladora.class
 Interfaz\PortalProveedores$ProvConsEdicElim.class
+Interfaz\NomCrearNomina$27.class
 exceptions\IllegalOrphanException.class
 Interfaz\NomCrearNomina$7.class
 Interfaz\NomCrearNomina$3.class
