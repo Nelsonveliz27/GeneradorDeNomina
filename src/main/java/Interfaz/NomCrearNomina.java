@@ -13,6 +13,7 @@ import static java.lang.Integer.parseInt;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -814,6 +815,39 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     //llamo al objeto de la clase default y al metodo de addrow y le asigno el atributo datos fila.
     modeloTableNomina.addRow(datosFila);
+    mostrarMensaje("Fila de pago agragada a la nomina con exito", "Info", "Agegado");
+    
+    
+    txtRutNomina.setText(""); 
+    txtNombreProvNomina.setText(""); 
+    txtOpNomina.setText(""); 
+    txtNumeroCuentaProvNom.setText(""); 
+    txtCodigoCuentaProvNom.setText(""); 
+    txtDoc1Nomina.setText(""); 
+    txtMontoDoc1Nomina.setText(""); 
+    txtDoc2Nomina.setText(""); 
+    txtMontoDoc2Nomina.setText(""); 
+    txtDoc3Nomina.setText(""); 
+    txtMontoDoc3Nomina.setText(""); 
+    txtDoc4Nomina.setText("");
+    txtMontoDoc4Nomina.setText("");
+    txtDoc5Nomina.setText("");
+    txtMontoDoc5Nomina.setText("");
+    txtDoc6Nomina.setText("");
+    txtMontoDoc6Nomina.setText("");
+    txtDoc7Nomina.setText("");
+    txtMontoDoc7Nomina.setText("");
+    txtDoc8Nomina.setText("");
+    txtMontoDoc8Nomina.setText("");
+    txtDoc9Nomina.setText("");
+    txtMontoDoc9Nomina.setText("");
+    txtDoc10Nomina.setText("");
+    txtMontoDoc10Nomina.setText("");
+    txtDoc11Nomina.setText("");
+    txtMontoDoc11Nomina.setText("");
+    
+    txtEmailProvNomina.setText("");
+    txtGlosaNomina.setText("");
      
     
     }//GEN-LAST:event_btnAgregarFilaActionPerformed
@@ -958,8 +992,22 @@ public class NomCrearNomina extends javax.swing.JFrame {
         
             modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
             tblDatosNomina.setModel(modeloTableNomina);
+            
 
         
+    }
+    
+    public void mostrarMensaje (String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } 
+        else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);        
     }
    
 }
