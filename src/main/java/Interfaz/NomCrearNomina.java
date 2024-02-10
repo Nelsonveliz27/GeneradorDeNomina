@@ -9,7 +9,7 @@ package Interfaz;
 import ExportarExcell.ExportarJtabletoExcell;
 import java.io.IOException;
 
-import static java.lang.Integer.parseInt;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -520,7 +520,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tblDatosNomina.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        tblDatosNomina.setAutoResizeMode(0);
         tblDatosNomina.setSelectionBackground(new java.awt.Color(255, 51, 51));
         tblDatosNomina.setShowGrid(true);
         tblDatosNomina.getTableHeader().setReorderingAllowed(false);
@@ -990,39 +990,40 @@ public class NomCrearNomina extends javax.swing.JFrame {
             "N Factura 6", "Monto 6", "N Factura 7", "Monto 7", "N Factura 8", "Monto 8",
             "N Factura 9", "Monto 9", "N Factura 10", "Monto 10", "N Factura 11", "Monto 11",
             "Monto Total","Mail Beneficiario","Glosa"};
-        
+             
             modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
             tblDatosNomina.setModel(modeloTableNomina);
-            tblDatosNomina.getColumnModel().getColumn(0).setPreferredWidth(300);
-            tblDatosNomina.getColumnModel().getColumn(1).setPreferredWidth(500);
-            tblDatosNomina.getColumnModel().getColumn(2).setPreferredWidth(300);
-            tblDatosNomina.getColumnModel().getColumn(3).setPreferredWidth(300);
-            tblDatosNomina.getColumnModel().getColumn(4).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(5).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(6).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(7).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(8).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(9).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(10).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(11).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(12).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(13).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(14).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(15).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(16).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(17).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(18).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(19).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(20).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(21).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(22).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(23).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(24).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(25).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(26).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(27).setPreferredWidth(200);
-            tblDatosNomina.getColumnModel().getColumn(28).setPreferredWidth(400);
-            tblDatosNomina.getColumnModel().getColumn(29).setPreferredWidth(400);
+            //Aca defino el tamaño de las columnas de la tabla
+            tblDatosNomina.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tblDatosNomina.getColumnModel().getColumn(1).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(2).setPreferredWidth(100);
+            tblDatosNomina.getColumnModel().getColumn(3).setPreferredWidth(100);
+            tblDatosNomina.getColumnModel().getColumn(4).setPreferredWidth(80);
+            tblDatosNomina.getColumnModel().getColumn(5).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(6).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(7).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(8).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(9).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(10).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(11).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(12).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(13).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(14).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(15).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(16).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(17).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(18).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(19).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(20).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(21).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(22).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(23).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(24).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(25).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(26).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(27).setPreferredWidth(90);
+            tblDatosNomina.getColumnModel().getColumn(28).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(29).setPreferredWidth(250);
 
         
     }
