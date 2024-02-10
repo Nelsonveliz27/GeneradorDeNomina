@@ -32,7 +32,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
-            }    
+            }  
+            
             
             
         };
@@ -520,7 +521,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
             }
         ));
         tblDatosNomina.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        tblDatosNomina.setSelectionBackground(new java.awt.Color(255, 51, 51));
         tblDatosNomina.setShowGrid(true);
+        tblDatosNomina.getTableHeader().setReorderingAllowed(false);
         tblDatosNomina.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 tblDatosNominaPropertyChange(evt);
@@ -571,19 +574,17 @@ public class NomCrearNomina extends javax.swing.JFrame {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE))
+                            .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtGlosaNomina)
                             .addComponent(txtEmailProvNomina)))
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addContainerGap(17, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(59, 59, 59))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1028, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanelLayout.createSequentialGroup()
                         .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -626,12 +627,12 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregarFila)
                     .addComponent(btnExportarAExcell))
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addGap(265, 265, 265))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -992,7 +993,36 @@ public class NomCrearNomina extends javax.swing.JFrame {
         
             modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
             tblDatosNomina.setModel(modeloTableNomina);
-            
+            tblDatosNomina.getColumnModel().getColumn(0).setPreferredWidth(300);
+            tblDatosNomina.getColumnModel().getColumn(1).setPreferredWidth(500);
+            tblDatosNomina.getColumnModel().getColumn(2).setPreferredWidth(300);
+            tblDatosNomina.getColumnModel().getColumn(3).setPreferredWidth(300);
+            tblDatosNomina.getColumnModel().getColumn(4).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(5).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(6).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(7).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(8).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(9).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(10).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(11).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(12).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(13).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(14).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(15).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(16).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(17).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(18).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(19).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(20).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(21).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(22).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(23).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(24).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(25).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(26).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(27).setPreferredWidth(200);
+            tblDatosNomina.getColumnModel().getColumn(28).setPreferredWidth(400);
+            tblDatosNomina.getColumnModel().getColumn(29).setPreferredWidth(400);
 
         
     }
