@@ -17,7 +17,7 @@ public class PagInicial extends javax.swing.JFrame {
     public PagInicial() {
         
         initComponents();
-        this.setTitle("PORTAL GENERADOR DE NOMINAS KOVACS, SPA.");
+        this.setTitle("PORTAL DE PAGOS KOVACS, SPA.");
         Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/kovacsLogo.png"));
         this.setIconImage(icono);
         this.setLocationRelativeTo(null);
@@ -84,20 +84,20 @@ public class PagInicial extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 137, 550, 60));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("PORTAL DE NOMINAS");
+        jLabel1.setText("PORTAL DE PAGOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 345, 56));
 
         ljlLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/kovacsLogo.png"))); // NOI18N
         jPanel1.add(ljlLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 170, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chevrolet.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 120, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 120, 60));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/nisaan.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 120, 80));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 120, 80));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/toyotaLogo.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, 70));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
