@@ -788,55 +788,55 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     //Documentos y Valores de la nomina
     String numeroDoc1Nom = txtDoc1Nomina.getText();
-    //    if (numeroDoc1Nom.trim().isEmpty()) {txtDoc1Nomina.setText("0");}    
+        if (numeroDoc1Nom.trim().isEmpty()) {txtDoc1Nomina.setText("0");}    
     String montoDoc1Nom  =  (txtMontoDoc1Nomina.getText());
-     //   if (montoDoc1Nom.trim().isEmpty()) {txtMontoDoc1Nomina.setText("0");}
+        if (montoDoc1Nom.trim().isEmpty()) {txtMontoDoc1Nomina.setText("0");}
     String numeroDoc2Nom  =  txtDoc2Nomina.getText();
-       // if (numeroDoc2Nom.trim().isEmpty()) {txtDoc2Nomina.setText("0");}
+        if (numeroDoc2Nom.trim().isEmpty()) {txtDoc2Nomina.setText("0");}
     String montoDoc2Nom =   (txtMontoDoc2Nomina.getText());
-       // if (montoDoc2Nom.trim().isEmpty()) {txtMontoDoc2Nomina.setText("0");}
+        if (montoDoc2Nom.trim().isEmpty()) {txtMontoDoc2Nomina.setText("0");}
     String numeroDoc3Nom =   txtDoc3Nomina.getText();
-        //if (numeroDoc3Nom.trim().isEmpty()) {txtDoc3Nomina.setText("0");}
+        if (numeroDoc3Nom.trim().isEmpty()) {txtDoc3Nomina.setText("0");}
     String montoDoc3Nom =  (txtMontoDoc3Nomina.getText());
-      //  if (montoDoc3Nom.trim().isEmpty()) {txtMontoDoc3Nomina.setText("0");}
+        if (montoDoc3Nom.trim().isEmpty()) {txtMontoDoc3Nomina.setText("0");}
     String numeroDoc4Nom =  txtDoc4Nomina.getText();
-       // if (numeroDoc4Nom.trim().isEmpty()) {txtDoc4Nomina.setText("0");}
+        if (numeroDoc4Nom.trim().isEmpty()) {txtDoc4Nomina.setText("0");}
     String montoDoc4Nom  = (txtMontoDoc4Nomina.getText());
-       // if (montoDoc4Nom.trim().isEmpty()) {txtMontoDoc4Nomina.setText("0");}
+        if (montoDoc4Nom.trim().isEmpty()) {txtMontoDoc4Nomina.setText("0");}
     String numeroDoc5Nom  = txtDoc5Nomina.getText();
-       // if (numeroDoc5Nom.trim().isEmpty()) {txtDoc5Nomina.setText("0");}
+        if (numeroDoc5Nom.trim().isEmpty()) {txtDoc5Nomina.setText("0");}
     String montoDoc5Nom =  (txtMontoDoc5Nomina.getText());
-       // if (montoDoc5Nom.trim().isEmpty()) {txtMontoDoc5Nomina.setText("0");}
+        if (montoDoc5Nom.trim().isEmpty()) {txtMontoDoc5Nomina.setText("0");}
     String numeroDoc6Nom  =  txtDoc6Nomina.getText();
-       // if (numeroDoc6Nom.trim().isEmpty()) {txtDoc6Nomina.setText("0");}
+        if (numeroDoc6Nom.trim().isEmpty()) {txtDoc6Nomina.setText("0");}
     String montoDoc6Nom = (txtMontoDoc6Nomina.getText());
-       // if (montoDoc6Nom.trim().isEmpty()) {txtMontoDoc6Nomina.setText("0");}
+        if (montoDoc6Nom.trim().isEmpty()) {txtMontoDoc6Nomina.setText("0");}
     String numeroDoc7Nom =  txtDoc7Nomina.getText();
-      //  if (numeroDoc7Nom.trim().isEmpty()) {txtDoc7Nomina.setText("0");}    
+        if (numeroDoc7Nom.trim().isEmpty()) {txtDoc7Nomina.setText("0");}    
     String montoDoc7Nom = (txtMontoDoc7Nomina.getText());
-     //   if (montoDoc7Nom.trim().isEmpty()) {txtMontoDoc7Nomina.setText("0");}
+        if (montoDoc7Nom.trim().isEmpty()) {txtMontoDoc7Nomina.setText("0");}
     String numeroDoc8Nom =  txtDoc8Nomina.getText();
-      //  if (numeroDoc8Nom.trim().isEmpty()) {txtDoc8Nomina.setText("0");}
+        if (numeroDoc8Nom.trim().isEmpty()) {txtDoc8Nomina.setText("0");}
     String montoDoc8Nom  = (txtMontoDoc8Nomina.getText());
-        //if (montoDoc8Nom.trim().isEmpty()) {txtMontoDoc8Nomina.setText("0");}        
+        if (montoDoc8Nom.trim().isEmpty()) {txtMontoDoc8Nomina.setText("0");}        
     String numeroDoc9Nom =  txtDoc9Nomina.getText();
-       // if (numeroDoc9Nom.trim().isEmpty()) {txtDoc9Nomina.setText("0");}
+        if (numeroDoc9Nom.trim().isEmpty()) {txtDoc9Nomina.setText("0");}
     String montoDoc9Nom  = (txtMontoDoc9Nomina.getText());
-       // if (montoDoc9Nom.trim().isEmpty()) {txtMontoDoc9Nomina.setText("0");}
+        if (montoDoc9Nom.trim().isEmpty()) {txtMontoDoc9Nomina.setText("0");}
     String numeroDoc10Nom  =  txtDoc10Nomina.getText();
-       // if (numeroDoc10Nom.trim().isEmpty()) {txtDoc10Nomina.setText("0");}
+        if (numeroDoc10Nom.trim().isEmpty()) {txtDoc10Nomina.setText("0");}
     String montoDoc10Nom =  (txtMontoDoc10Nomina.getText());
-       // if (montoDoc10Nom.trim().isEmpty()) {txtMontoDoc10Nomina.setText("0");}
+        if (montoDoc10Nom.trim().isEmpty()) {txtMontoDoc10Nomina.setText("0");}
     String numeroDoc11Nom  =  txtDoc11Nomina.getText();
-       // if (numeroDoc11Nom.trim().isEmpty()) {txtDoc11Nomina.setText("0");}
+        if (numeroDoc11Nom.trim().isEmpty()) {txtDoc11Nomina.setText("0");}
     String montoDoc11Nom = (txtMontoDoc11Nomina.getText());
-       // if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
+        if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
     String emailProvNom  =  txtEmailProvNomina.getText();
     String glosaNom  =  txtGlosaNomina.getText();
     if (glosaNom.trim().isEmpty()) { mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");}
-    String totalNom = montoDoc1Nom + montoDoc2Nom+ montoDoc3Nom+ montoDoc4Nom+ 
-                        montoDoc5Nom+ montoDoc6Nom+ montoDoc7Nom+ montoDoc8Nom +
-                        montoDoc9Nom+ montoDoc10Nom+ montoDoc11Nom;
+    //String totalNom = montoDoc1Nom + montoDoc2Nom+ montoDoc3Nom+ montoDoc4Nom+ 
+      //                  montoDoc5Nom+ montoDoc6Nom+ montoDoc7Nom+ montoDoc8Nom +
+        //                montoDoc9Nom+ montoDoc10Nom+ montoDoc11Nom;
         
 
 
@@ -852,10 +852,12 @@ public class NomCrearNomina extends javax.swing.JFrame {
         int montoDoc9Nomi= Integer.parseInt(montoDoc9Nom);
         int montoDoc10Nomi= Integer.parseInt(montoDoc10Nom);
         int montoDoc11Nomi= Integer.parseInt(montoDoc11Nom);
-        int totalNomina= Integer.parseInt(totalNom);
+        int totalNomina= montoDoc1Nomi + montoDoc2Nomi+ montoDoc3Nomi+ montoDoc4Nomi+ 
+                        montoDoc5Nomi+ montoDoc6Nomi+ montoDoc7Nomi+ montoDoc8Nomi +
+                        montoDoc9Nomi+ montoDoc10Nomi+ montoDoc11Nomi;
         
         if (totalNomina > 0 ) {
-          
+            
             
             //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y
             //le asigno una caja de texto a cada columna, de acuerdo a los datos que necesita.
@@ -930,8 +932,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtEmailProvNomina.setText("0");
             txtGlosaNomina.setText("0");
         } else {
-        
-        mostrarMensaje("Nomina no puede ir en 0", "Info", "Agegado"); 
+            
+            mostrarMensaje("Nomina no puede ir en 0", "Info", "Agegado");
         }
     }catch (NumberFormatException e){
     
