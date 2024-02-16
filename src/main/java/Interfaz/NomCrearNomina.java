@@ -841,6 +841,17 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
 
     try{
+        /*int numeroDoc1Nomi= Integer.parseInt(numeroDoc1Nom);
+        int numeroDoc2Nomi= Integer.parseInt(numeroDoc2Nom);
+        int numeroDoc3Nomi= Integer.parseInt(numeroDoc3Nom);
+        int numeroDoc4Nomi= Integer.parseInt(numeroDoc4Nom);
+        int numeroDoc5Nomi= Integer.parseInt(numeroDoc5Nom);
+        int numeroDoc6Nomi= Integer.parseInt(numeroDoc6Nom);
+        int numeroDoc7Nomi= Integer.parseInt(numeroDoc7Nom);
+        int numeroDoc8Nomi= Integer.parseInt(numeroDoc8Nom);
+        int numeroDoc9Nomi= Integer.parseInt(numeroDoc9Nom);
+        int numeroDoc10Nomi= Integer.parseInt(numeroDoc10Nom);
+        int numeroDoc11Nomi= Integer.parseInt(numeroDoc11Nom);*/
         int montoDoc1Nomi= Integer.parseInt(montoDoc1Nom);
         int montoDoc2Nomi= Integer.parseInt(montoDoc2Nom);
         int montoDoc3Nomi= Integer.parseInt(montoDoc3Nom);

@@ -59,7 +59,9 @@ public class ExportarJtabletoExcell {
                             celda.setCellValue(Double.parseDouble(t.getValueAt(f, c).toString()));
                         } else if (t.getValueAt(f, c) instanceof Float) {
                             celda.setCellValue(Float.parseFloat((String) t.getValueAt(f, c)));
-                        } else {
+                        } else if (t.getValueAt(f, c) instanceof Integer) {
+                            celda.setCellValue(Integer.parseInt(t.getValueAt(f, c).toString()));
+                        }else {
                             celda.setCellValue(String.valueOf(t.getValueAt(f, c)));
                         }
                     }
