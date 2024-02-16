@@ -162,6 +162,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel30.setText("DOC. 11");
 
+        txtMontoDoc11Nomina.setText("0");
         txtMontoDoc11Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc11NominaActionPerformed(evt);
@@ -170,12 +171,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel31.setText("VALOR 11");
 
+        txtDoc11Nomina.setText("0");
         txtDoc11Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc11NominaActionPerformed(evt);
             }
         });
 
+        txtDoc10Nomina.setText("0");
         txtDoc10Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc10NominaActionPerformed(evt);
@@ -186,12 +189,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel33.setText("VALOR 10");
 
+        txtMontoDoc10Nomina.setText("0");
         txtMontoDoc10Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc10NominaActionPerformed(evt);
             }
         });
 
+        txtMontoDoc9Nomina.setText("0");
         txtMontoDoc9Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc9NominaActionPerformed(evt);
@@ -200,6 +205,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel34.setText("VALOR 9");
 
+        txtDoc9Nomina.setText("0");
         txtDoc9Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc9NominaActionPerformed(evt);
@@ -210,6 +216,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel36.setText("DOC. 8");
 
+        txtDoc8Nomina.setText("0");
         txtDoc8Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc8NominaActionPerformed(evt);
@@ -218,12 +225,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel37.setText("VALOR 8");
 
+        txtMontoDoc8Nomina.setText("0");
         txtMontoDoc8Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc8NominaActionPerformed(evt);
             }
         });
 
+        txtMontoDoc7Nomina.setText("0");
         txtMontoDoc7Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc7NominaActionPerformed(evt);
@@ -232,6 +241,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel38.setText("VALOR 7");
 
+        txtDoc7Nomina.setText("0");
         txtDoc7Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc7NominaActionPerformed(evt);
@@ -242,6 +252,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel40.setText("DOC. 6");
 
+        txtDoc6Nomina.setText("0");
         txtDoc6Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc6NominaActionPerformed(evt);
@@ -250,12 +261,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel41.setText("VALOR 6");
 
+        txtMontoDoc6Nomina.setText("0");
         txtMontoDoc6Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc6NominaActionPerformed(evt);
             }
         });
 
+        txtMontoDoc5Nomina.setText("0");
         txtMontoDoc5Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc5NominaActionPerformed(evt);
@@ -264,6 +277,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel42.setText("VALOR 5");
 
+        txtDoc5Nomina.setText("0");
         txtDoc5Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc5NominaActionPerformed(evt);
@@ -274,6 +288,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel44.setText("DOC. 4");
 
+        txtDoc4Nomina.setText("0");
         txtDoc4Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc4NominaActionPerformed(evt);
@@ -282,12 +297,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel45.setText("VALOR 4");
 
+        txtMontoDoc4Nomina.setText("0");
         txtMontoDoc4Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc4NominaActionPerformed(evt);
             }
         });
 
+        txtMontoDoc3Nomina.setText("0");
         txtMontoDoc3Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc3NominaActionPerformed(evt);
@@ -296,6 +313,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel46.setText("VALOR 3");
 
+        txtDoc3Nomina.setText("0");
         txtDoc3Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc3NominaActionPerformed(evt);
@@ -306,6 +324,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel48.setText("DOC. 2");
 
+        txtDoc2Nomina.setText("0");
         txtDoc2Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc2NominaActionPerformed(evt);
@@ -314,12 +333,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel49.setText("VALOR 2");
 
+        txtMontoDoc2Nomina.setText("0");
         txtMontoDoc2Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc2NominaActionPerformed(evt);
             }
         });
 
+        txtMontoDoc1Nomina.setText("0");
         txtMontoDoc1Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMontoDoc1NominaActionPerformed(evt);
@@ -328,6 +349,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel50.setText("VALOR 1");
 
+        txtDoc1Nomina.setText("0");
         txtDoc1Nomina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDoc1NominaActionPerformed(evt);
@@ -659,7 +681,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 330, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -766,52 +788,58 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     //Documentos y Valores de la nomina
     String numeroDoc1Nom = txtDoc1Nomina.getText();
-        if (numeroDoc1Nom.trim().isEmpty()) {txtDoc1Nomina.setText("0");}    
+    //    if (numeroDoc1Nom.trim().isEmpty()) {txtDoc1Nomina.setText("0");}    
     String montoDoc1Nom  =  (txtMontoDoc1Nomina.getText());
-    
+     //   if (montoDoc1Nom.trim().isEmpty()) {txtMontoDoc1Nomina.setText("0");}
     String numeroDoc2Nom  =  txtDoc2Nomina.getText();
-        if (numeroDoc2Nom.trim().isEmpty()) {txtDoc2Nomina.setText("0");}
+       // if (numeroDoc2Nom.trim().isEmpty()) {txtDoc2Nomina.setText("0");}
     String montoDoc2Nom =   (txtMontoDoc2Nomina.getText());
-       
+       // if (montoDoc2Nom.trim().isEmpty()) {txtMontoDoc2Nomina.setText("0");}
     String numeroDoc3Nom =   txtDoc3Nomina.getText();
-        if (numeroDoc3Nom.trim().isEmpty()) {txtDoc3Nomina.setText("0");}
+        //if (numeroDoc3Nom.trim().isEmpty()) {txtDoc3Nomina.setText("0");}
     String montoDoc3Nom =  (txtMontoDoc3Nomina.getText());
-    
+      //  if (montoDoc3Nom.trim().isEmpty()) {txtMontoDoc3Nomina.setText("0");}
     String numeroDoc4Nom =  txtDoc4Nomina.getText();
-        if (numeroDoc4Nom.trim().isEmpty()) {txtDoc4Nomina.setText("0");}
+       // if (numeroDoc4Nom.trim().isEmpty()) {txtDoc4Nomina.setText("0");}
     String montoDoc4Nom  = (txtMontoDoc4Nomina.getText());
-    
+       // if (montoDoc4Nom.trim().isEmpty()) {txtMontoDoc4Nomina.setText("0");}
     String numeroDoc5Nom  = txtDoc5Nomina.getText();
-        if (numeroDoc5Nom.trim().isEmpty()) {txtDoc5Nomina.setText("0");}
-   String montoDoc5Nom =  (txtMontoDoc5Nomina.getText());
-        
+       // if (numeroDoc5Nom.trim().isEmpty()) {txtDoc5Nomina.setText("0");}
+    String montoDoc5Nom =  (txtMontoDoc5Nomina.getText());
+       // if (montoDoc5Nom.trim().isEmpty()) {txtMontoDoc5Nomina.setText("0");}
     String numeroDoc6Nom  =  txtDoc6Nomina.getText();
-        if (numeroDoc6Nom.trim().isEmpty()) {txtDoc6Nomina.setText("0");}
+       // if (numeroDoc6Nom.trim().isEmpty()) {txtDoc6Nomina.setText("0");}
     String montoDoc6Nom = (txtMontoDoc6Nomina.getText());
-        
+       // if (montoDoc6Nom.trim().isEmpty()) {txtMontoDoc6Nomina.setText("0");}
     String numeroDoc7Nom =  txtDoc7Nomina.getText();
-        if (numeroDoc7Nom.trim().isEmpty()) {txtDoc7Nomina.setText("0");}    
+      //  if (numeroDoc7Nom.trim().isEmpty()) {txtDoc7Nomina.setText("0");}    
     String montoDoc7Nom = (txtMontoDoc7Nomina.getText());
-        
+     //   if (montoDoc7Nom.trim().isEmpty()) {txtMontoDoc7Nomina.setText("0");}
     String numeroDoc8Nom =  txtDoc8Nomina.getText();
-        if (numeroDoc8Nom.trim().isEmpty()) {txtDoc8Nomina.setText("0");}
+      //  if (numeroDoc8Nom.trim().isEmpty()) {txtDoc8Nomina.setText("0");}
     String montoDoc8Nom  = (txtMontoDoc8Nomina.getText());
-        
+        //if (montoDoc8Nom.trim().isEmpty()) {txtMontoDoc8Nomina.setText("0");}        
     String numeroDoc9Nom =  txtDoc9Nomina.getText();
-        if (numeroDoc9Nom.trim().isEmpty()) {txtDoc9Nomina.setText("0");}
+       // if (numeroDoc9Nom.trim().isEmpty()) {txtDoc9Nomina.setText("0");}
     String montoDoc9Nom  = (txtMontoDoc9Nomina.getText());
-        
+       // if (montoDoc9Nom.trim().isEmpty()) {txtMontoDoc9Nomina.setText("0");}
     String numeroDoc10Nom  =  txtDoc10Nomina.getText();
-        if (numeroDoc10Nom.trim().isEmpty()) {txtDoc10Nomina.setText("0");}
+       // if (numeroDoc10Nom.trim().isEmpty()) {txtDoc10Nomina.setText("0");}
     String montoDoc10Nom =  (txtMontoDoc10Nomina.getText());
-        
+       // if (montoDoc10Nom.trim().isEmpty()) {txtMontoDoc10Nomina.setText("0");}
     String numeroDoc11Nom  =  txtDoc11Nomina.getText();
-        if (numeroDoc11Nom.trim().isEmpty()) {txtDoc11Nomina.setText("0");}
+       // if (numeroDoc11Nom.trim().isEmpty()) {txtDoc11Nomina.setText("0");}
     String montoDoc11Nom = (txtMontoDoc11Nomina.getText());
+       // if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
     String emailProvNom  =  txtEmailProvNomina.getText();
     String glosaNom  =  txtGlosaNomina.getText();
     if (glosaNom.trim().isEmpty()) { mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");}
-    
+    String totalNom = montoDoc1Nom + montoDoc2Nom+ montoDoc3Nom+ montoDoc4Nom+ 
+                        montoDoc5Nom+ montoDoc6Nom+ montoDoc7Nom+ montoDoc8Nom +
+                        montoDoc9Nom+ montoDoc10Nom+ montoDoc11Nom;
+        
+
+
     try{
         int montoDoc1Nomi= Integer.parseInt(montoDoc1Nom);
         int montoDoc2Nomi= Integer.parseInt(montoDoc2Nom);
@@ -824,95 +852,87 @@ public class NomCrearNomina extends javax.swing.JFrame {
         int montoDoc9Nomi= Integer.parseInt(montoDoc9Nom);
         int montoDoc10Nomi= Integer.parseInt(montoDoc10Nom);
         int montoDoc11Nomi= Integer.parseInt(montoDoc11Nom);
-    
-        if (montoDoc1Nom.trim().isEmpty()) {txtMontoDoc1Nomina.setText("0");}
-        else if (montoDoc2Nom.trim().isEmpty()) {txtMontoDoc2Nomina.setText("0");}
-        else if (montoDoc3Nom.trim().isEmpty()) {txtMontoDoc3Nomina.setText("0");}
-        else if (montoDoc4Nom.trim().isEmpty()) {txtMontoDoc4Nomina.setText("0");}
-        else if (montoDoc5Nom.trim().isEmpty()) {txtMontoDoc5Nomina.setText("0");}
-        else if (montoDoc6Nom.trim().isEmpty()) {txtMontoDoc6Nomina.setText("0");}
-        else if (montoDoc7Nom.trim().isEmpty()) {txtMontoDoc7Nomina.setText("0");}
-        else if (montoDoc8Nom.trim().isEmpty()) {txtMontoDoc8Nomina.setText("0");}
-        else if (montoDoc9Nom.trim().isEmpty()) {txtMontoDoc9Nomina.setText("0");}
-        else if (montoDoc10Nom.trim().isEmpty()) {txtMontoDoc10Nomina.setText("0");}
-        else if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
-        else {
-            //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y 
-    //le asigno una caja de texto a cada columna, de acuerdo a los datos que necesita.
-    
-    //Se crea una matriz de tipo object para que registro distintos tipos de datos.
-    Object []  datosFila =new Object[30];
-    
-    datosFila[0] = rutProvNom;
-    datosFila[1] = nombreProvNom;
-    datosFila[2] = modalidadProvNom;
-    datosFila[3] = nroCtaProvNom;
-    datosFila[4] = codCtaProvNom;
-    datosFila[5] = numeroDoc1Nom;
-    datosFila[6] = montoDoc1Nomi;
-    datosFila[7] = numeroDoc2Nom;
-    datosFila[8] = montoDoc2Nomi;
-    datosFila[9] = numeroDoc3Nom;
-    datosFila[10] = montoDoc3Nomi;
-    datosFila[11] = numeroDoc4Nom;
-    datosFila[12] = montoDoc4Nomi;
-    datosFila[13] = numeroDoc5Nom;
-    datosFila[14] = montoDoc5Nomi;
-    datosFila[15] = numeroDoc6Nom;
-    datosFila[16] = montoDoc6Nomi;
-    datosFila[17] = numeroDoc7Nom;
-    datosFila[18] = montoDoc7Nomi;
-    datosFila[19] = numeroDoc8Nom;
-    datosFila[20] = montoDoc8Nomi;
-    datosFila[21] = numeroDoc9Nom;
-    datosFila[22] = montoDoc9Nomi;
-    datosFila[23] = numeroDoc10Nom;
-    datosFila[24] = montoDoc10Nomi;
-    datosFila[25] = numeroDoc11Nom;
-    datosFila[26] = montoDoc11Nomi;
-    datosFila[27] = montoDoc3Nomi + montoDoc1Nomi + montoDoc2Nomi+ montoDoc4Nomi 
-                    + montoDoc5Nomi + montoDoc6Nomi+ montoDoc7Nomi+ montoDoc8Nomi
-                    + montoDoc9Nomi+ montoDoc10Nomi+ montoDoc11Nomi;
-    datosFila[28] = emailProvNom;
-    datosFila[29] = glosaNom;
-    
-    //llamo al objeto de la clase default y al metodo de addrow y le asigno el atributo datos fila.
-    modeloTableNomina.addRow(datosFila);
-    mostrarMensaje("Fila de pago agragada a la nomina con exito", "Info", "Agegado");
-    
-    
-    txtRutNomina.setText(""); 
-    txtNombreProvNomina.setText(""); 
-    txtOpNomina.setText("3"); 
-    txtNumeroCuentaProvNom.setText(""); 
-    txtCodigoCuentaProvNom.setText(""); 
-    txtDoc1Nomina.setText(""); 
-    txtMontoDoc1Nomina.setText(""); 
-    txtDoc2Nomina.setText(""); 
-    txtMontoDoc2Nomina.setText(""); 
-    txtDoc3Nomina.setText(""); 
-    txtMontoDoc3Nomina.setText(""); 
-    txtDoc4Nomina.setText("");
-    txtMontoDoc4Nomina.setText("");
-    txtDoc5Nomina.setText("");
-    txtMontoDoc5Nomina.setText("");
-    txtDoc6Nomina.setText("");
-    txtMontoDoc6Nomina.setText("");
-    txtDoc7Nomina.setText("");
-    txtMontoDoc7Nomina.setText("");
-    txtDoc8Nomina.setText("");
-    txtMontoDoc8Nomina.setText("");
-    txtDoc9Nomina.setText("");
-    txtMontoDoc9Nomina.setText("");
-    txtDoc10Nomina.setText("");
-    txtMontoDoc10Nomina.setText("");
-    txtDoc11Nomina.setText("");
-    txtMontoDoc11Nomina.setText("");
-    
-    txtEmailProvNomina.setText("");
-    txtGlosaNomina.setText("");
-        }
+        int totalNomina= Integer.parseInt(totalNom);
         
+        if (totalNomina > 0 ) {
+          
+            
+            //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y
+            //le asigno una caja de texto a cada columna, de acuerdo a los datos que necesita.
+            
+            //Se crea una matriz de tipo object para que registro distintos tipos de datos.
+            Object []  datosFila =new Object[30];
+            
+            datosFila[0] = rutProvNom;
+            datosFila[1] = nombreProvNom;
+            datosFila[2] = modalidadProvNom;
+            datosFila[3] = nroCtaProvNom;
+            datosFila[4] = codCtaProvNom;
+            datosFila[5] = numeroDoc1Nom;
+            datosFila[6] = montoDoc1Nomi;
+            datosFila[7] = numeroDoc2Nom;
+            datosFila[8] = montoDoc2Nomi;
+            datosFila[9] = numeroDoc3Nom;
+            datosFila[10] = montoDoc3Nomi;
+            datosFila[11] = numeroDoc4Nom;
+            datosFila[12] = montoDoc4Nomi;
+            datosFila[13] = numeroDoc5Nom;
+            datosFila[14] = montoDoc5Nomi;
+            datosFila[15] = numeroDoc6Nom;
+            datosFila[16] = montoDoc6Nomi;
+            datosFila[17] = numeroDoc7Nom;
+            datosFila[18] = montoDoc7Nomi;
+            datosFila[19] = numeroDoc8Nom;
+            datosFila[20] = montoDoc8Nomi;
+            datosFila[21] = numeroDoc9Nom;
+            datosFila[22] = montoDoc9Nomi;
+            datosFila[23] = numeroDoc10Nom;
+            datosFila[24] = montoDoc10Nomi;
+            datosFila[25] = numeroDoc11Nom;
+            datosFila[26] = montoDoc11Nomi;
+            datosFila[27] = totalNomina;            
+            datosFila[28] = emailProvNom;
+            datosFila[29] = glosaNom;
+            
+            //llamo al objeto de la clase default y al metodo de addrow y le asigno el atributo datos fila.
+            modeloTableNomina.addRow(datosFila);
+            mostrarMensaje("Fila de pago agragada a la nomina con exito", "Info", "Agegado");
+            
+            
+            txtRutNomina.setText("");
+            txtNombreProvNomina.setText("");
+            txtOpNomina.setText("3");
+            txtNumeroCuentaProvNom.setText("");
+            txtCodigoCuentaProvNom.setText("");
+            txtDoc1Nomina.setText("0");
+            txtMontoDoc1Nomina.setText("0");
+            txtDoc2Nomina.setText("0");
+            txtMontoDoc2Nomina.setText("0");
+            txtDoc3Nomina.setText("0");
+            txtMontoDoc3Nomina.setText("0");
+            txtDoc4Nomina.setText("0");
+            txtMontoDoc4Nomina.setText("0");
+            txtDoc5Nomina.setText("0");
+            txtMontoDoc5Nomina.setText("0");
+            txtDoc6Nomina.setText("0");
+            txtMontoDoc6Nomina.setText("0");
+            txtDoc7Nomina.setText("0");
+            txtMontoDoc7Nomina.setText("0");
+            txtDoc8Nomina.setText("0");
+            txtMontoDoc8Nomina.setText("0");
+            txtDoc9Nomina.setText("0");
+            txtMontoDoc9Nomina.setText("0");
+            txtDoc10Nomina.setText("0");
+            txtMontoDoc10Nomina.setText("0");
+            txtDoc11Nomina.setText("0");
+            txtMontoDoc11Nomina.setText("0");
+            
+            txtEmailProvNomina.setText("0");
+            txtGlosaNomina.setText("0");
+        } else {
+        
+        mostrarMensaje("Nomina no puede ir en 0", "Info", "Agegado"); 
+        }
     }catch (NumberFormatException e){
     
     

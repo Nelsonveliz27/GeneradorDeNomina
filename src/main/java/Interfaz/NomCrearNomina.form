@@ -36,7 +36,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel" min="-2" pref="661" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -437,6 +437,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc11Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc11NominaActionPerformed"/>
               </Events>
@@ -447,11 +450,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc11Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc11NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc10Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc10NominaActionPerformed"/>
               </Events>
@@ -467,11 +476,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc10Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc10NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc9Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc9NominaActionPerformed"/>
               </Events>
@@ -482,6 +497,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc9Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc9NominaActionPerformed"/>
               </Events>
@@ -497,6 +515,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc8Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc8NominaActionPerformed"/>
               </Events>
@@ -507,11 +528,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc8Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc8NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc7Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc7NominaActionPerformed"/>
               </Events>
@@ -522,6 +549,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc7Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc7NominaActionPerformed"/>
               </Events>
@@ -537,6 +567,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc6Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc6NominaActionPerformed"/>
               </Events>
@@ -547,11 +580,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc6Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc6NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc5Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc5NominaActionPerformed"/>
               </Events>
@@ -562,6 +601,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc5Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc5NominaActionPerformed"/>
               </Events>
@@ -577,6 +619,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc4Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc4NominaActionPerformed"/>
               </Events>
@@ -587,11 +632,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc4Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc4NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc3Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc3NominaActionPerformed"/>
               </Events>
@@ -602,6 +653,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc3Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc3NominaActionPerformed"/>
               </Events>
@@ -617,6 +671,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc2Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc2NominaActionPerformed"/>
               </Events>
@@ -627,11 +684,17 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc2Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc2NominaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMontoDoc1Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMontoDoc1NominaActionPerformed"/>
               </Events>
@@ -642,6 +705,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtDoc1Nomina">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDoc1NominaActionPerformed"/>
               </Events>
