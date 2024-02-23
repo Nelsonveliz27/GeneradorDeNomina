@@ -50,4 +50,6 @@ public class Controladora {
         controlpersis.ModificarProveedor(prov);
     }
     
+    
+    
 }

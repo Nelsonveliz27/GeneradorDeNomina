@@ -39,7 +39,7 @@ public class PagInicial extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnNominas = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnSalirApp = new javax.swing.JButton();
         btnProveedores = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         ljlLogo = new javax.swing.JLabel();
@@ -63,14 +63,14 @@ public class PagInicial extends javax.swing.JFrame {
         });
         jPanel2.add(btnNominas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 43));
 
-        jButton3.setText("SALIR");
-        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnSalirApp.setText("SALIR");
+        btnSalirApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalirApp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnSalirAppActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 127, 43));
+        jPanel2.add(btnSalirApp, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 127, 43));
 
         btnProveedores.setText("PROVEEDORES");
         btnProveedores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -119,9 +119,9 @@ public class PagInicial extends javax.swing.JFrame {
         pNominas.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnNominasActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnSalirAppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirAppActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirAppActionPerformed
 
     private void btnProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProveedoresActionPerformed
         PortalProveedores pProveedores = new PortalProveedores();
@@ -133,7 +133,7 @@ public class PagInicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNominas;
     private javax.swing.JButton btnProveedores;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnSalirApp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

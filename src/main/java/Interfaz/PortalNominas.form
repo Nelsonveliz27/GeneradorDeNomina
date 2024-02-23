@@ -117,7 +117,7 @@
                       <EmptySpace min="-2" pref="218" max="-2" attributes="0"/>
                       <Component id="jToggleButton3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="jToggleButton4" min="-2" pref="123" max="-2" attributes="0"/>
+                      <Component id="btnSalirPortalNomina" min="-2" pref="123" max="-2" attributes="0"/>
                       <EmptySpace pref="91" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -135,7 +135,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jToggleButton3" alignment="3" pref="44" max="32767" attributes="0"/>
-                          <Component id="jToggleButton4" alignment="3" pref="44" max="32767" attributes="0"/>
+                          <Component id="btnSalirPortalNomina" alignment="3" pref="44" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -166,10 +166,13 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton3ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JToggleButton" name="jToggleButton4">
+            <Component class="javax.swing.JToggleButton" name="btnSalirPortalNomina">
               <Properties>
                 <Property name="text" type="java.lang.String" value="SALIR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirPortalNominaActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

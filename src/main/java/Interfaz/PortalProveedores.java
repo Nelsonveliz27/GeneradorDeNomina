@@ -37,7 +37,7 @@ public class PortalProveedores extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         bntConsEdiElimProveedores = new javax.swing.JButton();
         btnNuevoProveedor = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnSalirPortalProveedores = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -64,11 +64,11 @@ public class PortalProveedores extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("SALIR");
-        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnSalirPortalProveedores.setText("SALIR");
+        btnSalirPortalProveedores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSalirPortalProveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnSalirPortalProveedoresActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class PortalProveedores extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(bntConsEdiElimProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSalirPortalProveedores, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -92,7 +92,7 @@ public class PortalProveedores extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnNuevoProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                     .addComponent(bntConsEdiElimProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSalirPortalProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -176,16 +176,16 @@ public class PortalProveedores extends javax.swing.JFrame {
         pProvNuevoProveedor.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnNuevoProveedorActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btnSalirPortalProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirPortalProveedoresActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnSalirPortalProveedoresActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bntConsEdiElimProveedores;
     private javax.swing.JButton btnNuevoProveedor;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnSalirPortalProveedores;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

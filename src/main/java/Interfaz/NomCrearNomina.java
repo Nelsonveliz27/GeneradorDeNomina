@@ -123,6 +123,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblDatosNomina = new javax.swing.JTable();
         btnExportarAExcell = new javax.swing.JButton();
+        btnModificarFilaNom = new javax.swing.JButton();
+        btnEliminarFilaNom = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -406,13 +408,13 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(122, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -558,6 +560,11 @@ public class NomCrearNomina extends javax.swing.JFrame {
         tblDatosNomina.setSelectionBackground(new java.awt.Color(255, 51, 51));
         tblDatosNomina.setShowGrid(true);
         tblDatosNomina.getTableHeader().setReorderingAllowed(false);
+        tblDatosNomina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblDatosNominaMouseClicked(evt);
+            }
+        });
         tblDatosNomina.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 tblDatosNominaPropertyChange(evt);
@@ -569,6 +576,20 @@ public class NomCrearNomina extends javax.swing.JFrame {
         btnExportarAExcell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExportarAExcellActionPerformed(evt);
+            }
+        });
+
+        btnModificarFilaNom.setText("EDITAR FILA");
+        btnModificarFilaNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarFilaNomActionPerformed(evt);
+            }
+        });
+
+        btnEliminarFilaNom.setText("ELIMINAR FILA");
+        btnEliminarFilaNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarFilaNomActionPerformed(evt);
             }
         });
 
@@ -621,6 +642,10 @@ public class NomCrearNomina extends javax.swing.JFrame {
                     .addComponent(jScrollPane2)
                     .addGroup(jPanelLayout.createSequentialGroup()
                         .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(btnModificarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnExportarAExcell, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(206, 206, 206))))
@@ -665,7 +690,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregarFila)
-                    .addComponent(btnExportarAExcell))
+                    .addComponent(btnExportarAExcell)
+                    .addComponent(btnModificarFilaNom)
+                    .addComponent(btnEliminarFilaNom))
                 .addGap(265, 265, 265))
         );
 
@@ -833,7 +860,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
         if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
     String emailProvNom  =  txtEmailProvNomina.getText();
     String glosaNom  =  txtGlosaNomina.getText();
-    if (glosaNom.trim().isEmpty()) { mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");}
+    if (glosaNom.trim().isEmpty()) {
+        mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");
+    } else {}
     //String totalNom = montoDoc1Nom + montoDoc2Nom+ montoDoc3Nom+ montoDoc4Nom+ 
       //                  montoDoc5Nom+ montoDoc6Nom+ montoDoc7Nom+ montoDoc8Nom +
         //                montoDoc9Nom+ montoDoc10Nom+ montoDoc11Nom;
@@ -939,7 +968,6 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtMontoDoc10Nomina.setText("0");
             txtDoc11Nomina.setText("0");
             txtMontoDoc11Nomina.setText("0");
-            
             txtEmailProvNomina.setText("0");
             txtGlosaNomina.setText("0");
         } else {
@@ -1017,11 +1045,129 @@ public class NomCrearNomina extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtOpNominaActionPerformed
 
+    private void btnModificarFilaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarFilaNomActionPerformed
+        if (tblDatosNomina.getSelectedRow()>0){
+            int filaNom = tblDatosNomina.getSelectedRow();
+            tblDatosNomina.setValueAt(txtRutNomina.getText(), filaNom, 0);
+            tblDatosNomina.setValueAt(txtNombreProvNomina.getText(), filaNom, 1);
+            tblDatosNomina.setValueAt(txtOpNomina.getText(), filaNom, 2);
+            tblDatosNomina.setValueAt(txtNumeroCuentaProvNom.getText(), filaNom, 3);
+            tblDatosNomina.setValueAt(txtCodigoCuentaProvNom.getText(), filaNom, 4);
+            tblDatosNomina.setValueAt(txtDoc1Nomina.getText(), filaNom, 5);
+            tblDatosNomina.setValueAt(txtMontoDoc1Nomina.getText(), filaNom, 6);
+            tblDatosNomina.setValueAt(txtDoc2Nomina.getText(), filaNom, 7);
+            tblDatosNomina.setValueAt(txtMontoDoc2Nomina.getText(), filaNom, 8);
+            tblDatosNomina.setValueAt(txtDoc3Nomina.getText(), filaNom, 9);
+            tblDatosNomina.setValueAt(txtMontoDoc3Nomina.getText(), filaNom, 10);
+            tblDatosNomina.setValueAt(txtDoc4Nomina.getText(), filaNom, 11);
+            tblDatosNomina.setValueAt(txtMontoDoc4Nomina.getText(), filaNom, 12);
+            tblDatosNomina.setValueAt(txtDoc5Nomina.getText(), filaNom, 13);
+            tblDatosNomina.setValueAt(txtMontoDoc5Nomina.getText(), filaNom, 14);
+            tblDatosNomina.setValueAt(txtDoc6Nomina.getText(), filaNom, 15);
+            tblDatosNomina.setValueAt(txtMontoDoc6Nomina.getText(), filaNom, 16);
+            tblDatosNomina.setValueAt(txtDoc7Nomina.getText(), filaNom, 17);
+            tblDatosNomina.setValueAt(txtMontoDoc7Nomina.getText(), filaNom, 18);
+            tblDatosNomina.setValueAt(txtDoc8Nomina.getText(), filaNom, 19);
+            tblDatosNomina.setValueAt(txtMontoDoc8Nomina.getText(), filaNom, 20);
+            tblDatosNomina.setValueAt(txtDoc9Nomina.getText(), filaNom, 21);
+            tblDatosNomina.setValueAt(txtMontoDoc9Nomina.getText(), filaNom, 22);
+            tblDatosNomina.setValueAt(txtDoc10Nomina.getText(), filaNom, 23);
+            tblDatosNomina.setValueAt(txtMontoDoc10Nomina.getText(), filaNom, 24);
+            tblDatosNomina.setValueAt(txtDoc11Nomina.getText(), filaNom, 25);
+            tblDatosNomina.setValueAt(txtMontoDoc11Nomina.getText(), filaNom, 26);
+            tblDatosNomina.setValueAt(txtEmailProvNomina.getText(), filaNom, 28);
+            tblDatosNomina.setValueAt(txtGlosaNomina.getText(), filaNom, 29);
+            
+        }
+    }//GEN-LAST:event_btnModificarFilaNomActionPerformed
+
+    private void btnEliminarFilaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarFilaNomActionPerformed
+        DefaultTableModel modelo = (DefaultTableModel) tblDatosNomina.getModel();  
+        int filaNom = tblDatosNomina.getSelectedRow();
+        if (filaNom<0) {
+            JOptionPane.showMessageDialog(null, "Debe seleccionar una fila", null, filaNom, null);           
+        }
+        else{
+            int resp =JOptionPane.showConfirmDialog(null, "Estas seguro?"," Alerta", JOptionPane.YES_NO_OPTION);
+            if(JOptionPane.OK_OPTION==resp)
+                modelo.removeRow(filaNom);
+        }
+    }//GEN-LAST:event_btnEliminarFilaNomActionPerformed
+
+    private void tblDatosNominaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDatosNominaMouseClicked
+        if (tblDatosNomina.getSelectedRow()>0){
+            int filaNom = tblDatosNomina.getSelectedRow();
+            String[] datosLeidos=
+                {
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 0)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 1)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 2)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 3)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 4)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 5)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 6)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 7)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 8)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 9)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 10)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 11)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 12)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 13)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 14)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 15)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 16)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 17)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 18)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 19)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 20)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 21)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 22)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 23)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 24)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 25)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 26)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 28)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 29))};
+                    
+                txtRutNomina.setText(datosLeidos[0]);
+                txtNombreProvNomina.setText(datosLeidos[1]);
+                txtOpNomina.setText(datosLeidos[2]);
+                txtNumeroCuentaProvNom.setText(datosLeidos[3]);
+                txtCodigoCuentaProvNom.setText(datosLeidos[4]);
+                txtDoc1Nomina.setText(datosLeidos[5]);
+                txtMontoDoc1Nomina.setText(datosLeidos[6]);
+                txtDoc2Nomina.setText(datosLeidos[7]);
+                txtMontoDoc2Nomina.setText(datosLeidos[8]);
+                txtDoc3Nomina.setText(datosLeidos[9]);
+                txtMontoDoc3Nomina.setText(datosLeidos[10]);
+                txtDoc4Nomina.setText(datosLeidos[11]);
+                txtMontoDoc4Nomina.setText(datosLeidos[12]);
+                txtDoc5Nomina.setText(datosLeidos[13]);
+                txtMontoDoc5Nomina.setText(datosLeidos[14]);
+                txtDoc6Nomina.setText(datosLeidos[15]);
+                txtMontoDoc6Nomina.setText(datosLeidos[16]);
+                txtDoc7Nomina.setText(datosLeidos[17]);
+                txtMontoDoc7Nomina.setText(datosLeidos[18]);
+                txtDoc8Nomina.setText(datosLeidos[19]);
+                txtMontoDoc8Nomina.setText(datosLeidos[20]);
+                txtDoc9Nomina.setText(datosLeidos[21]);
+                txtMontoDoc9Nomina.setText(datosLeidos[22]);
+                txtDoc10Nomina.setText(datosLeidos[23]);
+                txtMontoDoc10Nomina.setText(datosLeidos[24]);
+                txtDoc11Nomina.setText(datosLeidos[25]);
+                txtMontoDoc11Nomina.setText(datosLeidos[26]);
+                txtEmailProvNomina.setText(datosLeidos[28]);
+                txtGlosaNomina.setText(datosLeidos[29]);
+                }
+    }//GEN-LAST:event_tblDatosNominaMouseClicked
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgregarFila;
+    private javax.swing.JButton btnEliminarFilaNom;
     private javax.swing.JButton btnExportarAExcell;
+    private javax.swing.JButton btnModificarFilaNom;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

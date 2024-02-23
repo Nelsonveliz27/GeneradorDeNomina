@@ -1,7 +1,9 @@
 Interfaz\NomCrearNomina$19.class
+Interfaz\NomCrearNomina$32.class
 Interfaz\NomCrearNomina$22.class
 Interfaz\NomCrearNomina$29.class
 Interfaz\NomCrearNomina$5.class
+Interfaz\ProvConsEdicElimProveedor$6.class
 Interfaz\NomCrearNomina$12.class
 Interfaz\PagInicial$1.class
 Interfaz\NomCrearNomina$16.class
@@ -16,12 +18,14 @@ Interfaz\PortalNominas$1.class
 Interfaz\NomCrearNomina$1.class
 Interfaz\NomCrearNomina$13.class
 Interfaz\PortalNominas$2.class
+Interfaz\NomCrearNomina$33.class
 Interfaz\NomCrearNomina$21.class
 Interfaz\PagInicial.class
 Logica\Nomina.class
 Interfaz\NomCrearNomina$8.class
 Interfaz\NomCrearNomina$10.class
 Logica\Proveedor.class
+Interfaz\ProvModificar$4.class
 Interfaz\ProvConsEdicElimProveedor.class
 Interfaz\ProvConsEdicElimProveedor$1.class
 Interfaz\NomCrearNomina$2.class
@@ -43,6 +47,7 @@ Interfaz\NomCrearNomina$27.class
 exceptions\IllegalOrphanException.class
 Interfaz\NomCrearNomina$7.class
 Interfaz\NomCrearNomina$3.class
+Interfaz\PortalNominas$3.class
 Persistencia\ControladoraPersistencia.class
 Interfaz\PortalProveedores.class
 Interfaz\NomCrearNomina.class
@@ -56,10 +61,12 @@ Interfaz\PortalProveedores$1.class
 Interfaz\ProvConsEdicElimProveedor$5.class
 Interfaz\NomCrearNomina$6.class
 Interfaz\NomCrearNomina$23.class
+Interfaz\ProvNuevoProveedor$4.class
 Interfaz\NomCrearNomina$4.class
 Interfaz\PortalProveedores$3.class
 Interfaz\NomCrearNomina$11.class
 Interfaz\ProvModificar$2.class
+Interfaz\NomCrearNomina$31.class
 ExportarExcell\ExportarJtabletoExcell.class
 Interfaz\NomCrearNomina$26.class
 Interfaz\ProvNuevoProveedor$1.class

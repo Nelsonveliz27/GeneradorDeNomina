@@ -109,6 +109,10 @@
                       <Component id="jScrollPane2" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnAgregarFila" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnModificarFilaNom" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnEliminarFilaNom" min="-2" pref="135" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnExportarAExcell" min="-2" pref="182" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
@@ -165,6 +169,8 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnAgregarFila" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnExportarAExcell" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnModificarFilaNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnEliminarFilaNom" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
               </Group>
@@ -291,14 +297,14 @@
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel33" min="-2" pref="64" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jLabel31" min="-2" pref="67" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
                               <Component id="jLabel32" min="-2" pref="51" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jLabel30" min="-2" pref="51" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel33" min="-2" pref="64" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel31" min="-2" pref="67" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="122" max="32767" attributes="0"/>
@@ -794,6 +800,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblDatosNominaMouseClicked"/>
                 <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="tblDatosNominaPropertyChange"/>
               </Events>
             </Component>
@@ -805,6 +812,22 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExportarAExcellActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnModificarFilaNom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="EDITAR FILA"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarFilaNomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnEliminarFilaNom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="ELIMINAR FILA"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarFilaNomActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
