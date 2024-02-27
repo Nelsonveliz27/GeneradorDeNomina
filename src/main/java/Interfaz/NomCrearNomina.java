@@ -9,14 +9,20 @@ package Interfaz;
 import ExportarExcell.ExportarJtabletoExcell;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JButton;
 import javax.swing.JDialog;
+
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -28,6 +34,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
     
     PreparedStatement ps;
+    
     ResultSet rs;
      DefaultTableModel modeloTableNomina = new DefaultTableModel() {
             
@@ -46,6 +53,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/kovacsLogo.png"));
         this.setIconImage(icono);
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -118,6 +126,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         txtDoc1Nomina = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
+        lblTotalNomina = new javax.swing.JLabel();
+        btnTotalizarNomina = new javax.swing.JButton();
+        lblTotalFilaNomina = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         btnAgregarFila = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -360,6 +371,24 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         jLabel51.setText("DOC. 1");
 
+        lblTotalNomina.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblTotalNominaPropertyChange(evt);
+            }
+        });
+
+        btnTotalizarNomina.setText("TOTALIZAR");
+        btnTotalizarNomina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTotalizarNominaMouseClicked(evt);
+            }
+        });
+        btnTotalizarNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTotalizarNominaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -416,6 +445,14 @@ public class NomCrearNomina extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(122, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTotalNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnTotalizarNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                    .addComponent(lblTotalFilaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(13, 13, 13)
@@ -483,7 +520,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
                     .addComponent(jLabel35)
                     .addComponent(jLabel32)
                     .addComponent(jLabel30))
-                .addGap(42, 42, 42)
+                .addGap(13, 13, 13)
+                .addComponent(btnTotalizarNomina)
+                .addGap(5, 5, 5)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel49)
                     .addComponent(jLabel46)
@@ -495,7 +534,11 @@ public class NomCrearNomina extends javax.swing.JFrame {
                     .addComponent(jLabel34)
                     .addComponent(jLabel33)
                     .addComponent(jLabel31))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblTotalFilaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblTotalNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(33, 33, 33)
@@ -598,47 +641,45 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jPanelLayout.setHorizontalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtOpNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNombreProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanelLayout.createSequentialGroup()
-                                        .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(56, 56, 56)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtGlosaNomina)
-                            .addComponent(txtEmailProvNomina)))
+                            .addComponent(txtOpNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNombreProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanelLayout.createSequentialGroup()
+                                .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtGlosaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+                    .addComponent(txtEmailProvNomina))
                 .addGap(59, 59, 59))
             .addGroup(jPanelLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane2)
                     .addGroup(jPanelLayout.createSequentialGroup()
                         .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -683,7 +724,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                             .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(12, 12, 12)
                 .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -717,94 +758,6 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private void jPanelPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jPanelPropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanelPropertyChange
-
-    private void txtDoc1NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc1NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc1NominaActionPerformed
-
-    private void txtMontoDoc1NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc1NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc1NominaActionPerformed
-
-    private void txtMontoDoc2NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc2NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc2NominaActionPerformed
-
-    private void txtDoc2NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc2NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc2NominaActionPerformed
-
-    private void txtDoc3NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc3NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc3NominaActionPerformed
-
-    private void txtMontoDoc3NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc3NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc3NominaActionPerformed
-
-    private void txtMontoDoc4NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc4NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc4NominaActionPerformed
-
-    private void txtDoc4NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc4NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc4NominaActionPerformed
-
-    private void txtDoc5NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc5NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc5NominaActionPerformed
-
-    private void txtMontoDoc5NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc5NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc5NominaActionPerformed
-
-    private void txtMontoDoc6NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc6NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc6NominaActionPerformed
-
-    private void txtDoc6NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc6NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc6NominaActionPerformed
-
-    private void txtDoc7NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc7NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc7NominaActionPerformed
-
-    private void txtMontoDoc7NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc7NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc7NominaActionPerformed
-
-    private void txtMontoDoc8NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc8NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc8NominaActionPerformed
-
-    private void txtDoc8NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc8NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc8NominaActionPerformed
-
-    private void txtDoc9NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc9NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc9NominaActionPerformed
-
-    private void txtMontoDoc9NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc9NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc9NominaActionPerformed
-
-    private void txtMontoDoc10NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc10NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc10NominaActionPerformed
-
-    private void txtDoc10NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc10NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc10NominaActionPerformed
-
-    private void txtDoc11NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc11NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDoc11NominaActionPerformed
-
-    private void txtMontoDoc11NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc11NominaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMontoDoc11NominaActionPerformed
 
     private void btnAgregarFilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarFilaActionPerformed
     String rutProvNom = txtRutNomina.getText(); 
@@ -972,7 +925,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtGlosaNomina.setText("0");
         } else {
             
-            mostrarMensaje("Nomina no puede ir en 0", "Info", "Agegado");
+            mostrarMensaje("Nomina no puede ir en 0", "Info", "Agregado");
         }
     }catch (NumberFormatException e){
     
@@ -1095,7 +1048,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarFilaNomActionPerformed
 
     private void tblDatosNominaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDatosNominaMouseClicked
-        if (tblDatosNomina.getSelectedRow()>0){
+        if (tblDatosNomina.getSelectedRow()>-1){
             int filaNom = tblDatosNomina.getSelectedRow();
             String[] datosLeidos=
                 {
@@ -1161,6 +1114,134 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 }
     }//GEN-LAST:event_tblDatosNominaMouseClicked
 
+    private void lblTotalNominaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lblTotalNominaPropertyChange
+
+    }//GEN-LAST:event_lblTotalNominaPropertyChange
+
+    private void txtDoc1NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc1NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc1NominaActionPerformed
+
+    private void txtMontoDoc1NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc1NominaActionPerformed
+
+    }//GEN-LAST:event_txtMontoDoc1NominaActionPerformed
+
+    private void txtMontoDoc2NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc2NominaActionPerformed
+
+    }//GEN-LAST:event_txtMontoDoc2NominaActionPerformed
+
+    private void txtDoc2NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc2NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc2NominaActionPerformed
+
+    private void txtDoc3NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc3NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc3NominaActionPerformed
+
+    private void txtMontoDoc3NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc3NominaActionPerformed
+
+    }//GEN-LAST:event_txtMontoDoc3NominaActionPerformed
+
+    private void txtMontoDoc4NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc4NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc4NominaActionPerformed
+
+    private void txtDoc4NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc4NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc4NominaActionPerformed
+
+    private void txtDoc5NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc5NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc5NominaActionPerformed
+
+    private void txtMontoDoc5NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc5NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc5NominaActionPerformed
+
+    private void txtMontoDoc6NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc6NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc6NominaActionPerformed
+
+    private void txtDoc6NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc6NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc6NominaActionPerformed
+
+    private void txtDoc7NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc7NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc7NominaActionPerformed
+
+    private void txtMontoDoc7NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc7NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc7NominaActionPerformed
+
+    private void txtMontoDoc8NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc8NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc8NominaActionPerformed
+
+    private void txtDoc8NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc8NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc8NominaActionPerformed
+
+    private void txtDoc9NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc9NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc9NominaActionPerformed
+
+    private void txtMontoDoc9NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc9NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc9NominaActionPerformed
+
+    private void txtMontoDoc10NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc10NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc10NominaActionPerformed
+
+    private void txtDoc10NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc10NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc10NominaActionPerformed
+
+    private void txtDoc11NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoc11NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDoc11NominaActionPerformed
+
+    private void txtMontoDoc11NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc11NominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMontoDoc11NominaActionPerformed
+
+    private void btnTotalizarNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalizarNominaActionPerformed
+         
+        
+        
+
+        
+                // Obtener los valores de los JTextField y convertirlos a números
+                int valor1 = Integer.parseInt(txtMontoDoc1Nomina.getText());
+                int valor2 = Integer.parseInt(txtMontoDoc2Nomina.getText());
+                int valor3 = Integer.parseInt(txtMontoDoc3Nomina.getText());
+                int valor4 = Integer.parseInt(txtMontoDoc4Nomina.getText());
+                int valor5 = Integer.parseInt(txtMontoDoc5Nomina.getText());
+                int valor6 = Integer.parseInt(txtMontoDoc6Nomina.getText());
+                int valor7 = Integer.parseInt(txtMontoDoc7Nomina.getText());
+                int valor8 = Integer.parseInt(txtMontoDoc8Nomina.getText());
+                int valor9 = Integer.parseInt(txtMontoDoc9Nomina.getText());
+                int valor10 = Integer.parseInt(txtMontoDoc10Nomina.getText());
+                int valor11 = Integer.parseInt(txtMontoDoc11Nomina.getText());
+
+
+
+
+
+
+
+                   // Realizar la suma
+                int resultado = valor1  + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11;
+                // Mostrar el resultado en el JTextField correspondiente
+                lblTotalFilaNomina.setText(Integer.toString(resultado));
+            
+    }//GEN-LAST:event_btnTotalizarNominaActionPerformed
+
+    private void btnTotalizarNominaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTotalizarNominaMouseClicked
+       
+    }//GEN-LAST:event_btnTotalizarNominaMouseClicked
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1168,6 +1249,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarFilaNom;
     private javax.swing.JButton btnExportarAExcell;
     private javax.swing.JButton btnModificarFilaNom;
+    private javax.swing.JButton btnTotalizarNomina;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1202,6 +1284,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblTotalFilaNomina;
+    private javax.swing.JLabel lblTotalNomina;
     private javax.swing.JTable tblDatosNomina;
     private javax.swing.JTextField txtCodigoCuentaProvNom;
     private javax.swing.JTextField txtDoc10Nomina;
@@ -1297,5 +1381,30 @@ public class NomCrearNomina extends javax.swing.JFrame {
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);        
     }
-   
+
+    /*private void updateLabel() {
+    
+           
+        int montoDoc1Nomi= Integer.parseInt(txtMontoDoc1Nomina.getText());
+        int montoDoc2Nomi= Integer.parseInt(txtMontoDoc2Nomina.getText());
+        int montoDoc3Nomi= Integer.parseInt(txtMontoDoc3Nomina.getText());
+        int montoDoc4Nomi= Integer.parseInt(txtMontoDoc4Nomina.getText());
+        int montoDoc5Nomi= Integer.parseInt(txtMontoDoc5Nomina.getText());
+        int montoDoc6Nomi= Integer.parseInt(txtMontoDoc6Nomina.getText());
+        int montoDoc7Nomi= Integer.parseInt(txtMontoDoc7Nomina.getText());
+        int montoDoc8Nomi= Integer.parseInt(txtMontoDoc8Nomina.getText());
+        int montoDoc9Nomi= Integer.parseInt(txtMontoDoc9Nomina.getText());
+        int montoDoc10Nomi= Integer.parseInt(txtMontoDoc10Nomina.getText());
+        int montoDoc11Nomi= Integer.parseInt(txtMontoDoc11Nomina.getText());
+        String totalNomina= String.valueOf(montoDoc1Nomi + montoDoc2Nomi+ montoDoc3Nomi+ montoDoc4Nomi+ 
+                        montoDoc5Nomi+ montoDoc6Nomi+ montoDoc7Nomi+ montoDoc8Nomi +
+                        montoDoc9Nomi+ montoDoc10Nomi+ montoDoc11Nomi);
+        lblTotalNomina.setText(totalNomina);
+    }*/
+ 
+    
+    
+    
+    
+    
 }

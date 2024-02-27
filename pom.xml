@@ -75,6 +75,12 @@
             <artifactId>AbsoluteLayout</artifactId>
             <version>SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.afester.javafx</groupId>
+            <artifactId>Examples</artifactId>
+            <version>0.1</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

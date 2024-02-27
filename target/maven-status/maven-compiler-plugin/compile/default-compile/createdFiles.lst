@@ -22,6 +22,7 @@ Interfaz\NomCrearNomina$33.class
 Interfaz\NomCrearNomina$21.class
 Interfaz\PagInicial.class
 Logica\Nomina.class
+Interfaz\NomCrearNomina$36.class
 Interfaz\NomCrearNomina$8.class
 Interfaz\NomCrearNomina$10.class
 Logica\Proveedor.class
@@ -57,6 +58,7 @@ com\mycompany\nominakovacs\NominaKovacs.class
 Interfaz\PagInicial$3.class
 Interfaz\PortalNominas.class
 Interfaz\NomCrearNomina$14.class
+Interfaz\NomCrearNomina$34.class
 Interfaz\PortalProveedores$1.class
 Interfaz\ProvConsEdicElimProveedor$5.class
 Interfaz\NomCrearNomina$6.class
@@ -69,6 +71,7 @@ Interfaz\ProvModificar$2.class
 Interfaz\NomCrearNomina$31.class
 ExportarExcell\ExportarJtabletoExcell.class
 Interfaz\NomCrearNomina$26.class
+Interfaz\NomCrearNomina$35.class
 Interfaz\ProvNuevoProveedor$1.class
 Interfaz\NomCrearNomina$20.class
 Interfaz\NomCrearNomina$15.class
