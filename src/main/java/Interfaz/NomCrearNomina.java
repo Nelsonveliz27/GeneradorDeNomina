@@ -922,8 +922,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtMontoDoc10Nomina.setText("0");
             txtDoc11Nomina.setText("0");
             txtMontoDoc11Nomina.setText("0");
-            txtEmailProvNomina.setText("0");
-            txtGlosaNomina.setText("0");
+            txtEmailProvNomina.setText("");
+            txtGlosaNomina.setText("");
+            txtTotalFilaNomina.setText("0");
         } else {
             
             mostrarMensaje("Nomina no puede ir en 0", "Info", "Agregado");
@@ -1000,7 +1001,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_txtOpNominaActionPerformed
 
     private void btnModificarFilaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarFilaNomActionPerformed
-        if (tblDatosNomina.getSelectedRow()>0){
+        if (tblDatosNomina.getSelectedRow()>-1){
             int filaNom = tblDatosNomina.getSelectedRow();
             tblDatosNomina.setValueAt(txtRutNomina.getText(), filaNom, 0);
             tblDatosNomina.setValueAt(txtNombreProvNomina.getText(), filaNom, 1);
@@ -1032,6 +1033,40 @@ public class NomCrearNomina extends javax.swing.JFrame {
             tblDatosNomina.setValueAt(txtTotalFilaNomina.getText(), filaNom, 27);
             tblDatosNomina.setValueAt(txtEmailProvNomina.getText(), filaNom, 28);
             tblDatosNomina.setValueAt(txtGlosaNomina.getText(), filaNom, 29);
+            
+            
+            txtRutNomina.setText("");
+            txtNombreProvNomina.setText("");
+            txtOpNomina.setText("3");
+            txtNumeroCuentaProvNom.setText("");
+            txtCodigoCuentaProvNom.setText("");
+            txtDoc1Nomina.setText("0");
+            txtMontoDoc1Nomina.setText("0");
+            txtDoc2Nomina.setText("0");
+            txtMontoDoc2Nomina.setText("0");
+            txtDoc3Nomina.setText("0");
+            txtMontoDoc3Nomina.setText("0");
+            txtDoc4Nomina.setText("0");
+            txtMontoDoc4Nomina.setText("0");
+            txtDoc5Nomina.setText("0");
+            txtMontoDoc5Nomina.setText("0");
+            txtDoc6Nomina.setText("0");
+            txtMontoDoc6Nomina.setText("0");
+            txtDoc7Nomina.setText("0");
+            txtMontoDoc7Nomina.setText("0");
+            txtDoc8Nomina.setText("0");
+            txtMontoDoc8Nomina.setText("0");
+            txtDoc9Nomina.setText("0");
+            txtMontoDoc9Nomina.setText("0");
+            txtDoc10Nomina.setText("0");
+            txtMontoDoc10Nomina.setText("0");
+            txtDoc11Nomina.setText("0");
+            txtMontoDoc11Nomina.setText("0");
+            txtTotalFilaNomina.setText("0");
+            txtEmailProvNomina.setText("0");
+            txtGlosaNomina.setText("");
+            txtTotalFilaNomina.setText("");
+            
             
         }
     }//GEN-LAST:event_btnModificarFilaNomActionPerformed
