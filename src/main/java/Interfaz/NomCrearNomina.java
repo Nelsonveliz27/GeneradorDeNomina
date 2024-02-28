@@ -1081,6 +1081,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             String.valueOf(tblDatosNomina.getValueAt(filaNom, 24)),
             String.valueOf(tblDatosNomina.getValueAt(filaNom, 25)),
             String.valueOf(tblDatosNomina.getValueAt(filaNom, 26)),
+            String.valueOf(tblDatosNomina.getValueAt(filaNom, 27)),
             String.valueOf(tblDatosNomina.getValueAt(filaNom, 28)),
             String.valueOf(tblDatosNomina.getValueAt(filaNom, 29))};
                     
@@ -1111,6 +1112,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 txtMontoDoc10Nomina.setText(datosLeidos[24]);
                 txtDoc11Nomina.setText(datosLeidos[25]);
                 txtMontoDoc11Nomina.setText(datosLeidos[26]);
+                txtTotalFilaNomina.setText(datosLeidos[27]);
                 txtEmailProvNomina.setText(datosLeidos[28]);
                 txtGlosaNomina.setText(datosLeidos[29]);
                 }
