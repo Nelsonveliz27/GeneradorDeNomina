@@ -812,8 +812,10 @@ public class NomCrearNomina extends javax.swing.JFrame {
         if (numeroDoc11Nom.trim().isEmpty()) {txtDoc11Nomina.setText("0");}
     String montoDoc11Nom = (txtMontoDoc11Nomina.getText());
         if (montoDoc11Nom.trim().isEmpty()) {txtMontoDoc11Nomina.setText("0");}
+    String totalNomina = (txtTotalFilaNomina.getText());
     String emailProvNom  =  txtEmailProvNomina.getText();
     String glosaNom  =  txtGlosaNomina.getText();
+    
     if (glosaNom.trim().isEmpty()) {
         mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");
     } else {}
@@ -846,11 +848,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
         int montoDoc9Nomi= Integer.parseInt(montoDoc9Nom);
         int montoDoc10Nomi= Integer.parseInt(montoDoc10Nom);
         int montoDoc11Nomi= Integer.parseInt(montoDoc11Nom);
-        int totalNomina= montoDoc1Nomi + montoDoc2Nomi+ montoDoc3Nomi+ montoDoc4Nomi+ 
-                        montoDoc5Nomi+ montoDoc6Nomi+ montoDoc7Nomi+ montoDoc8Nomi +
-                        montoDoc9Nomi+ montoDoc10Nomi+ montoDoc11Nomi;
+        int totalNominaf= Integer.parseInt(totalNomina);
         
-        if (totalNomina > 0 ) {
+        if (totalNominaf > 0 ) {
             
             
             //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y
@@ -886,7 +886,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             datosFila[24] = montoDoc10Nomi;
             datosFila[25] = numeroDoc11Nom;
             datosFila[26] = montoDoc11Nomi;
-            datosFila[27] = totalNomina;            
+            datosFila[27] = totalNominaf;            
             datosFila[28] = emailProvNom;
             datosFila[29] = glosaNom;
             
@@ -1029,6 +1029,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             tblDatosNomina.setValueAt(txtMontoDoc10Nomina.getText(), filaNom, 24);
             tblDatosNomina.setValueAt(txtDoc11Nomina.getText(), filaNom, 25);
             tblDatosNomina.setValueAt(txtMontoDoc11Nomina.getText(), filaNom, 26);
+            tblDatosNomina.setValueAt(txtTotalFilaNomina.getText(), filaNom, 27);
             tblDatosNomina.setValueAt(txtEmailProvNomina.getText(), filaNom, 28);
             tblDatosNomina.setValueAt(txtGlosaNomina.getText(), filaNom, 29);
             
