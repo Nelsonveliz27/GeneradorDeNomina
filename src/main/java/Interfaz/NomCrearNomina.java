@@ -9,6 +9,7 @@ package Interfaz;
 import ExportarExcell.ExportarJtabletoExcell;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
@@ -53,6 +54,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
         Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/kovacsLogo.png"));
         this.setIconImage(icono);
         this.setLocationRelativeTo(null);
+        
+       
+        
         
     }
 
@@ -1123,7 +1127,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDoc1NominaActionPerformed
 
     private void txtMontoDoc1NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc1NominaActionPerformed
-
+        //txtMontoDoc1Nomina.setEnabled(false);
+        
+        
     }//GEN-LAST:event_txtMontoDoc1NominaActionPerformed
 
     private void txtMontoDoc2NominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMontoDoc2NominaActionPerformed
