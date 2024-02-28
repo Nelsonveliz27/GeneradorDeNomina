@@ -859,7 +859,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             //Se crea una matriz de tipo object para que registro distintos tipos de datos.
             Object []  datosFila =new Object[30];
             
-            datosFila[0] = rutProvNom;
+            datosFila[0] =  rutProvNom;
             datosFila[1] = nombreProvNom;
             datosFila[2] = modalidadProvNom;
             datosFila[3] = nroCtaProvNom;
@@ -1003,35 +1003,57 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private void btnModificarFilaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarFilaNomActionPerformed
         if (tblDatosNomina.getSelectedRow()>-1){
             int filaNom = tblDatosNomina.getSelectedRow();
+            
+            int modalidadProvNom = Integer.parseInt(txtOpNomina.getText());
+            int nroCtaProvNom = Integer.parseInt(txtNumeroCuentaProvNom.getText());
+            int codCtaProvNom =  Integer.parseInt(txtCodigoCuentaProvNom.getText());
+            int montoDoc1Nomi= Integer.parseInt(txtMontoDoc1Nomina.getText());
+            int montoDoc2Nomi= Integer.parseInt(txtMontoDoc2Nomina.getText());
+            int montoDoc3Nomi= Integer.parseInt(txtMontoDoc3Nomina.getText());
+            int montoDoc4Nomi= Integer.parseInt(txtMontoDoc4Nomina.getText());
+            int montoDoc5Nomi= Integer.parseInt(txtMontoDoc5Nomina.getText());
+            int montoDoc6Nomi= Integer.parseInt(txtMontoDoc6Nomina.getText());
+            int montoDoc7Nomi= Integer.parseInt(txtMontoDoc7Nomina.getText());
+            int montoDoc8Nomi= Integer.parseInt(txtMontoDoc8Nomina.getText());
+            int montoDoc9Nomi= Integer.parseInt(txtMontoDoc9Nomina.getText());
+            int montoDoc10Nomi= Integer.parseInt(txtMontoDoc10Nomina.getText());
+            int montoDoc11Nomi= Integer.parseInt(txtMontoDoc11Nomina.getText());
+            int totalNominaf= Integer.parseInt(txtTotalFilaNomina.getText());
+
+            
+            
+            
+            
+            
             tblDatosNomina.setValueAt(txtRutNomina.getText(), filaNom, 0);
             tblDatosNomina.setValueAt(txtNombreProvNomina.getText(), filaNom, 1);
-            tblDatosNomina.setValueAt(txtOpNomina.getText(), filaNom, 2);
-            tblDatosNomina.setValueAt(txtNumeroCuentaProvNom.getText(), filaNom, 3);
-            tblDatosNomina.setValueAt(txtCodigoCuentaProvNom.getText(), filaNom, 4);
+            tblDatosNomina.setValueAt(modalidadProvNom, filaNom, 2);
+            tblDatosNomina.setValueAt(nroCtaProvNom, filaNom, 3);
+            tblDatosNomina.setValueAt(codCtaProvNom, filaNom, 4);
             tblDatosNomina.setValueAt(txtDoc1Nomina.getText(), filaNom, 5);
-            tblDatosNomina.setValueAt(txtMontoDoc1Nomina.getText(), filaNom, 6);
+            tblDatosNomina.setValueAt(montoDoc1Nomi, filaNom, 6);
             tblDatosNomina.setValueAt(txtDoc2Nomina.getText(), filaNom, 7);
-            tblDatosNomina.setValueAt(txtMontoDoc2Nomina.getText(), filaNom, 8);
+            tblDatosNomina.setValueAt(montoDoc2Nomi, filaNom, 8);
             tblDatosNomina.setValueAt(txtDoc3Nomina.getText(), filaNom, 9);
-            tblDatosNomina.setValueAt(txtMontoDoc3Nomina.getText(), filaNom, 10);
+            tblDatosNomina.setValueAt(montoDoc3Nomi, filaNom, 10);
             tblDatosNomina.setValueAt(txtDoc4Nomina.getText(), filaNom, 11);
-            tblDatosNomina.setValueAt(txtMontoDoc4Nomina.getText(), filaNom, 12);
+            tblDatosNomina.setValueAt(montoDoc4Nomi, filaNom, 12);
             tblDatosNomina.setValueAt(txtDoc5Nomina.getText(), filaNom, 13);
-            tblDatosNomina.setValueAt(txtMontoDoc5Nomina.getText(), filaNom, 14);
+            tblDatosNomina.setValueAt(montoDoc5Nomi, filaNom, 14);
             tblDatosNomina.setValueAt(txtDoc6Nomina.getText(), filaNom, 15);
-            tblDatosNomina.setValueAt(txtMontoDoc6Nomina.getText(), filaNom, 16);
+            tblDatosNomina.setValueAt(montoDoc6Nomi, filaNom, 16);
             tblDatosNomina.setValueAt(txtDoc7Nomina.getText(), filaNom, 17);
-            tblDatosNomina.setValueAt(txtMontoDoc7Nomina.getText(), filaNom, 18);
+            tblDatosNomina.setValueAt(montoDoc7Nomi, filaNom, 18);
             tblDatosNomina.setValueAt(txtDoc8Nomina.getText(), filaNom, 19);
-            tblDatosNomina.setValueAt(txtMontoDoc8Nomina.getText(), filaNom, 20);
+            tblDatosNomina.setValueAt(montoDoc8Nomi, filaNom, 20);
             tblDatosNomina.setValueAt(txtDoc9Nomina.getText(), filaNom, 21);
-            tblDatosNomina.setValueAt(txtMontoDoc9Nomina.getText(), filaNom, 22);
+            tblDatosNomina.setValueAt(montoDoc9Nomi, filaNom, 22);
             tblDatosNomina.setValueAt(txtDoc10Nomina.getText(), filaNom, 23);
-            tblDatosNomina.setValueAt(txtMontoDoc10Nomina.getText(), filaNom, 24);
+            tblDatosNomina.setValueAt(montoDoc10Nomi, filaNom, 24);
             tblDatosNomina.setValueAt(txtDoc11Nomina.getText(), filaNom, 25);
-            tblDatosNomina.setValueAt(txtMontoDoc11Nomina.getText(), filaNom, 26);
-            tblDatosNomina.setValueAt(txtTotalFilaNomina.getText(), filaNom, 27);
-            tblDatosNomina.setValueAt(txtEmailProvNomina.getText(), filaNom, 28);
+            tblDatosNomina.setValueAt(montoDoc11Nomi, filaNom, 26);
+            tblDatosNomina.setValueAt(totalNominaf, filaNom, 27);
+            tblDatosNomina.setValueAt(montoDoc1Nomi, filaNom, 28);
             tblDatosNomina.setValueAt(txtGlosaNomina.getText(), filaNom, 29);
             
             
