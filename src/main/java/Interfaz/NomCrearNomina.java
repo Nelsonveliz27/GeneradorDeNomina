@@ -9,21 +9,18 @@ package Interfaz;
 import ExportarExcell.ExportarJtabletoExcell;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.io.IOException;
 
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JButton;
+
 import javax.swing.JDialog;
 
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
+
 import javax.swing.table.DefaultTableModel;
 
 
@@ -132,7 +129,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jLabel51 = new javax.swing.JLabel();
         lblTotalNomina = new javax.swing.JLabel();
         btnTotalizarNomina = new javax.swing.JButton();
-        lblTotalFilaNomina = new javax.swing.JLabel();
+        txtTotalFilaNomina = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         btnAgregarFila = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -455,7 +452,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnTotalizarNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                    .addComponent(lblTotalFilaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtTotalFilaNomina))
                 .addGap(20, 20, 20))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -539,9 +536,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
                     .addComponent(jLabel33)
                     .addComponent(jLabel31))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblTotalFilaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblTotalNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTotalNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTotalFilaNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -1240,7 +1237,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                    // Realizar la suma
                 int resultado = valor1  + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11;
                 // Mostrar el resultado en el JTextField correspondiente
-                lblTotalFilaNomina.setText(Integer.toString(resultado));
+                txtTotalFilaNomina.setText(Integer.toString(resultado));
             
     }//GEN-LAST:event_btnTotalizarNominaActionPerformed
 
@@ -1290,7 +1287,6 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lblTotalFilaNomina;
     private javax.swing.JLabel lblTotalNomina;
     private javax.swing.JTable tblDatosNomina;
     private javax.swing.JTextField txtCodigoCuentaProvNom;
@@ -1322,6 +1318,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     private javax.swing.JTextField txtNumeroCuentaProvNom;
     private javax.swing.JTextField txtOpNomina;
     private javax.swing.JTextField txtRutNomina;
+    private javax.swing.JTextField txtTotalFilaNomina;
     // End of variables declaration//GEN-END:variables
     
     /**

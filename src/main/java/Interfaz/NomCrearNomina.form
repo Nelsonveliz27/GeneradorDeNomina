@@ -311,7 +311,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnTotalizarNomina" pref="83" max="32767" attributes="0"/>
-                          <Component id="lblTotalFilaNomina" max="32767" attributes="0"/>
+                          <Component id="txtTotalFilaNomina" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
@@ -405,9 +405,9 @@
                           <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="lblTotalFilaNomina" max="32767" attributes="0"/>
-                          <Component id="lblTotalNomina" pref="26" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblTotalNomina" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txtTotalFilaNomina" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="27" max="32767" attributes="0"/>
                   </Group>
@@ -750,7 +750,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTotalizarNominaActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblTotalFilaNomina">
+            <Component class="javax.swing.JTextField" name="txtTotalFilaNomina">
             </Component>
           </SubComponents>
         </Container>
