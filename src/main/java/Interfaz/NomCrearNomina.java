@@ -7,6 +7,8 @@ package Interfaz;
 
 
 import ExportarExcell.ExportarJtabletoExcell;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 
@@ -588,6 +590,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         });
 
         tblDatosNomina.setBackground(new java.awt.Color(255, 255, 255));
+        tblDatosNomina.setFont(new java.awt.Font("Arial", 0, 9)); // NOI18N
         tblDatosNomina.setForeground(new java.awt.Color(0, 0, 0));
         tblDatosNomina.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -601,7 +604,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             }
         ));
         tblDatosNomina.setAutoResizeMode(0);
-        tblDatosNomina.setSelectionBackground(new java.awt.Color(255, 51, 51));
+        tblDatosNomina.setSelectionBackground(new java.awt.Color(153, 204, 255));
         tblDatosNomina.setShowGrid(true);
         tblDatosNomina.getTableHeader().setReorderingAllowed(false);
         tblDatosNomina.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -970,7 +973,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "No se encuentra el proveedor");
             }
         } catch (SQLException e) {
-            System.out.println(" Erroe "+e);
+            System.out.println(" Error "+e);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -1303,18 +1306,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
                 Double valor10 = Double.valueOf(txtMontoDoc10Nomina.getText());
                 Double valor11 = Double.valueOf(txtMontoDoc11Nomina.getText());
                 
-                int numeroDoc1Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc2Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc3Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc4Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc5Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc6Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc7Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc8Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc9Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc10Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-                int numeroDoc11Nomi= Integer.parseInt(txtDoc1Nomina.getText());
-
+               
 
 
 
@@ -1412,8 +1404,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
      *
      */
     public void cargarTabla() {
-       //Aqui se hace que la tabla no sea editable
-      
+       
        
        String titulosTabNomina[] = {"Rut Beneficiario", "Nombre Beneficiario", "Cod. Modalidad", 
             "Cta Abono", "Cod. Banco", "N Factura 1", "Monto 1", "N Factura 2", "Monto 2",
@@ -1423,6 +1414,11 @@ public class NomCrearNomina extends javax.swing.JFrame {
             "Monto Total","Mail Beneficiario","Glosa"};
              
             modeloTableNomina.setColumnIdentifiers(titulosTabNomina);
+            
+            //Aca defino las caracteristicas del Header de la Tabla
+            tblDatosNomina.getTableHeader().setBackground(new Color (255,0,0));
+            tblDatosNomina.getTableHeader().setFont(new Font("Arial", Font.BOLD, 9));
+            tblDatosNomina.getTableHeader().setForeground(new Color (255,255,255));
             tblDatosNomina.setModel(modeloTableNomina);
             //Aca defino el tamaño de las columnas de la tabla
             tblDatosNomina.getColumnModel().getColumn(0).setPreferredWidth(100);
