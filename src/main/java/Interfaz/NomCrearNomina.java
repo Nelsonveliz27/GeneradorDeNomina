@@ -826,7 +826,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
 
     try{
-        /*int numeroDoc1Nomi= Integer.parseInt(numeroDoc1Nom);
+        int numeroDoc1Nomi= Integer.parseInt(numeroDoc1Nom);
         int numeroDoc2Nomi= Integer.parseInt(numeroDoc2Nom);
         int numeroDoc3Nomi= Integer.parseInt(numeroDoc3Nom);
         int numeroDoc4Nomi= Integer.parseInt(numeroDoc4Nom);
@@ -836,19 +836,19 @@ public class NomCrearNomina extends javax.swing.JFrame {
         int numeroDoc8Nomi= Integer.parseInt(numeroDoc8Nom);
         int numeroDoc9Nomi= Integer.parseInt(numeroDoc9Nom);
         int numeroDoc10Nomi= Integer.parseInt(numeroDoc10Nom);
-        int numeroDoc11Nomi= Integer.parseInt(numeroDoc11Nom);*/
-        int montoDoc1Nomi= Integer.parseInt(montoDoc1Nom);
-        int montoDoc2Nomi= Integer.parseInt(montoDoc2Nom);
-        int montoDoc3Nomi= Integer.parseInt(montoDoc3Nom);
-        int montoDoc4Nomi= Integer.parseInt(montoDoc4Nom);
-        int montoDoc5Nomi= Integer.parseInt(montoDoc5Nom);
-        int montoDoc6Nomi= Integer.parseInt(montoDoc6Nom);
-        int montoDoc7Nomi= Integer.parseInt(montoDoc7Nom);
-        int montoDoc8Nomi= Integer.parseInt(montoDoc8Nom);
-        int montoDoc9Nomi= Integer.parseInt(montoDoc9Nom);
-        int montoDoc10Nomi= Integer.parseInt(montoDoc10Nom);
-        int montoDoc11Nomi= Integer.parseInt(montoDoc11Nom);
-        int totalNominaf= Integer.parseInt(totalNomina);
+        int numeroDoc11Nomi= Integer.parseInt(numeroDoc11Nom);
+        Double montoDoc1Nomi= Double.valueOf(montoDoc1Nom);
+        Double montoDoc2Nomi= Double.valueOf(montoDoc2Nom);
+        Double montoDoc3Nomi= Double.valueOf(montoDoc3Nom);
+        Double montoDoc4Nomi= Double.valueOf(montoDoc4Nom);
+        Double montoDoc5Nomi= Double.valueOf(montoDoc5Nom);
+        Double montoDoc6Nomi= Double.valueOf(montoDoc6Nom);
+        Double montoDoc7Nomi= Double.valueOf(montoDoc7Nom);
+        Double montoDoc8Nomi= Double.valueOf(montoDoc8Nom);
+        Double montoDoc9Nomi= Double.valueOf(montoDoc9Nom);
+        Double montoDoc10Nomi= Double.valueOf(montoDoc10Nom);
+        Double montoDoc11Nomi= Double.valueOf(montoDoc11Nom);
+        Double totalNominaf= Double.valueOf(totalNomina);
         
         if (totalNominaf > 0 ) {
             
@@ -864,27 +864,27 @@ public class NomCrearNomina extends javax.swing.JFrame {
             datosFila[2] = modalidadProvNom;
             datosFila[3] = nroCtaProvNom;
             datosFila[4] = codCtaProvNom;
-            datosFila[5] = numeroDoc1Nom;
+            datosFila[5] = numeroDoc1Nomi;
             datosFila[6] = montoDoc1Nomi;
-            datosFila[7] = numeroDoc2Nom;
+            datosFila[7] = numeroDoc2Nomi;
             datosFila[8] = montoDoc2Nomi;
-            datosFila[9] = numeroDoc3Nom;
+            datosFila[9] = numeroDoc3Nomi;
             datosFila[10] = montoDoc3Nomi;
-            datosFila[11] = numeroDoc4Nom;
+            datosFila[11] = numeroDoc4Nomi;
             datosFila[12] = montoDoc4Nomi;
-            datosFila[13] = numeroDoc5Nom;
+            datosFila[13] = numeroDoc5Nomi;
             datosFila[14] = montoDoc5Nomi;
-            datosFila[15] = numeroDoc6Nom;
+            datosFila[15] = numeroDoc6Nomi;
             datosFila[16] = montoDoc6Nomi;
-            datosFila[17] = numeroDoc7Nom;
+            datosFila[17] = numeroDoc7Nomi;
             datosFila[18] = montoDoc7Nomi;
-            datosFila[19] = numeroDoc8Nom;
+            datosFila[19] = numeroDoc8Nomi;
             datosFila[20] = montoDoc8Nomi;
-            datosFila[21] = numeroDoc9Nom;
+            datosFila[21] = numeroDoc9Nomi;
             datosFila[22] = montoDoc9Nomi;
-            datosFila[23] = numeroDoc10Nom;
+            datosFila[23] = numeroDoc10Nomi;
             datosFila[24] = montoDoc10Nomi;
-            datosFila[25] = numeroDoc11Nom;
+            datosFila[25] = numeroDoc11Nomi;
             datosFila[26] = montoDoc11Nomi;
             datosFila[27] = totalNominaf;            
             datosFila[28] = emailProvNom;
@@ -1007,18 +1007,29 @@ public class NomCrearNomina extends javax.swing.JFrame {
             int modalidadProvNom = Integer.parseInt(txtOpNomina.getText());
             int nroCtaProvNom = Integer.parseInt(txtNumeroCuentaProvNom.getText());
             int codCtaProvNom =  Integer.parseInt(txtCodigoCuentaProvNom.getText());
-            int montoDoc1Nomi= Integer.parseInt(txtMontoDoc1Nomina.getText());
-            int montoDoc2Nomi= Integer.parseInt(txtMontoDoc2Nomina.getText());
-            int montoDoc3Nomi= Integer.parseInt(txtMontoDoc3Nomina.getText());
-            int montoDoc4Nomi= Integer.parseInt(txtMontoDoc4Nomina.getText());
-            int montoDoc5Nomi= Integer.parseInt(txtMontoDoc5Nomina.getText());
-            int montoDoc6Nomi= Integer.parseInt(txtMontoDoc6Nomina.getText());
-            int montoDoc7Nomi= Integer.parseInt(txtMontoDoc7Nomina.getText());
-            int montoDoc8Nomi= Integer.parseInt(txtMontoDoc8Nomina.getText());
-            int montoDoc9Nomi= Integer.parseInt(txtMontoDoc9Nomina.getText());
-            int montoDoc10Nomi= Integer.parseInt(txtMontoDoc10Nomina.getText());
-            int montoDoc11Nomi= Integer.parseInt(txtMontoDoc11Nomina.getText());
-            int totalNominaf= Integer.parseInt(txtTotalFilaNomina.getText());
+            Double montoDoc1Nomi= Double.valueOf(txtMontoDoc1Nomina.getText());
+            Double montoDoc2Nomi= Double.valueOf(txtMontoDoc2Nomina.getText());
+            Double montoDoc3Nomi= Double.valueOf(txtMontoDoc3Nomina.getText());
+            Double montoDoc4Nomi= Double.valueOf(txtMontoDoc4Nomina.getText());
+            Double montoDoc5Nomi= Double.valueOf(txtMontoDoc5Nomina.getText());
+            Double montoDoc6Nomi= Double.valueOf(txtMontoDoc6Nomina.getText());
+            Double montoDoc7Nomi= Double.valueOf(txtMontoDoc7Nomina.getText());
+            Double montoDoc8Nomi= Double.valueOf(txtMontoDoc8Nomina.getText());
+            Double montoDoc9Nomi= Double.valueOf(txtMontoDoc9Nomina.getText());
+            Double montoDoc10Nomi= Double.valueOf(txtMontoDoc10Nomina.getText());
+            Double montoDoc11Nomi= Double.valueOf(txtMontoDoc11Nomina.getText());
+            Double totalNominaf= Double.valueOf(txtTotalFilaNomina.getText());
+            int numeroDoc1Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc2Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc3Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc4Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc5Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc6Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc7Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc8Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc9Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc10Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+            int numeroDoc11Nomi= Integer.parseInt(txtDoc1Nomina.getText());
 
             
             
@@ -1030,30 +1041,30 @@ public class NomCrearNomina extends javax.swing.JFrame {
             tblDatosNomina.setValueAt(modalidadProvNom, filaNom, 2);
             tblDatosNomina.setValueAt(nroCtaProvNom, filaNom, 3);
             tblDatosNomina.setValueAt(codCtaProvNom, filaNom, 4);
-            tblDatosNomina.setValueAt(txtDoc1Nomina.getText(), filaNom, 5);
+            tblDatosNomina.setValueAt(numeroDoc1Nomi, filaNom, 5);
             tblDatosNomina.setValueAt(montoDoc1Nomi, filaNom, 6);
-            tblDatosNomina.setValueAt(txtDoc2Nomina.getText(), filaNom, 7);
+            tblDatosNomina.setValueAt(numeroDoc2Nomi, filaNom, 7);
             tblDatosNomina.setValueAt(montoDoc2Nomi, filaNom, 8);
-            tblDatosNomina.setValueAt(txtDoc3Nomina.getText(), filaNom, 9);
+            tblDatosNomina.setValueAt(numeroDoc3Nomi, filaNom, 9);
             tblDatosNomina.setValueAt(montoDoc3Nomi, filaNom, 10);
-            tblDatosNomina.setValueAt(txtDoc4Nomina.getText(), filaNom, 11);
+            tblDatosNomina.setValueAt(numeroDoc4Nomi, filaNom, 11);
             tblDatosNomina.setValueAt(montoDoc4Nomi, filaNom, 12);
-            tblDatosNomina.setValueAt(txtDoc5Nomina.getText(), filaNom, 13);
+            tblDatosNomina.setValueAt(numeroDoc5Nomi, filaNom, 13);
             tblDatosNomina.setValueAt(montoDoc5Nomi, filaNom, 14);
-            tblDatosNomina.setValueAt(txtDoc6Nomina.getText(), filaNom, 15);
+            tblDatosNomina.setValueAt(numeroDoc6Nomi, filaNom, 15);
             tblDatosNomina.setValueAt(montoDoc6Nomi, filaNom, 16);
-            tblDatosNomina.setValueAt(txtDoc7Nomina.getText(), filaNom, 17);
+            tblDatosNomina.setValueAt(numeroDoc7Nomi, filaNom, 17);
             tblDatosNomina.setValueAt(montoDoc7Nomi, filaNom, 18);
-            tblDatosNomina.setValueAt(txtDoc8Nomina.getText(), filaNom, 19);
+            tblDatosNomina.setValueAt(numeroDoc8Nomi, filaNom, 19);
             tblDatosNomina.setValueAt(montoDoc8Nomi, filaNom, 20);
-            tblDatosNomina.setValueAt(txtDoc9Nomina.getText(), filaNom, 21);
+            tblDatosNomina.setValueAt(numeroDoc9Nomi, filaNom, 21);
             tblDatosNomina.setValueAt(montoDoc9Nomi, filaNom, 22);
-            tblDatosNomina.setValueAt(txtDoc10Nomina.getText(), filaNom, 23);
+            tblDatosNomina.setValueAt(numeroDoc10Nomi, filaNom, 23);
             tblDatosNomina.setValueAt(montoDoc10Nomi, filaNom, 24);
-            tblDatosNomina.setValueAt(txtDoc11Nomina.getText(), filaNom, 25);
+            tblDatosNomina.setValueAt(numeroDoc11Nomi, filaNom, 25);
             tblDatosNomina.setValueAt(montoDoc11Nomi, filaNom, 26);
             tblDatosNomina.setValueAt(totalNominaf, filaNom, 27);
-            tblDatosNomina.setValueAt(montoDoc1Nomi, filaNom, 28);
+            tblDatosNomina.setValueAt(txtEmailProvNomina.getText(), filaNom, 28);
             tblDatosNomina.setValueAt(txtGlosaNomina.getText(), filaNom, 29);
             
             
@@ -1088,7 +1099,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtEmailProvNomina.setText("0");
             txtGlosaNomina.setText("");
             txtTotalFilaNomina.setText("");
-            
+            //Habilito nuevamente el boton de guardar nuevas filas
+            btnAgregarFila.setEnabled(true);
             
         }
     }//GEN-LAST:event_btnModificarFilaNomActionPerformed
@@ -1108,6 +1120,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
     private void tblDatosNominaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDatosNominaMouseClicked
         if (tblDatosNomina.getSelectedRow()>-1){
+            
+            //Desahabilito el boton de guardar nuevas filas, para que no se dupique la file que estoy modificando.
+            btnAgregarFila.setEnabled(false);
             int filaNom = tblDatosNomina.getSelectedRow();
             String[] datosLeidos=
                 {
@@ -1276,17 +1291,29 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
         
                 // Obtener los valores de los JTextField y convertirlos a números
-                int valor1 = Integer.parseInt(txtMontoDoc1Nomina.getText());
-                int valor2 = Integer.parseInt(txtMontoDoc2Nomina.getText());
-                int valor3 = Integer.parseInt(txtMontoDoc3Nomina.getText());
-                int valor4 = Integer.parseInt(txtMontoDoc4Nomina.getText());
-                int valor5 = Integer.parseInt(txtMontoDoc5Nomina.getText());
-                int valor6 = Integer.parseInt(txtMontoDoc6Nomina.getText());
-                int valor7 = Integer.parseInt(txtMontoDoc7Nomina.getText());
-                int valor8 = Integer.parseInt(txtMontoDoc8Nomina.getText());
-                int valor9 = Integer.parseInt(txtMontoDoc9Nomina.getText());
-                int valor10 = Integer.parseInt(txtMontoDoc10Nomina.getText());
-                int valor11 = Integer.parseInt(txtMontoDoc11Nomina.getText());
+                Double valor1 = Double.valueOf(txtMontoDoc1Nomina.getText());
+                Double valor2 = Double.valueOf(txtMontoDoc2Nomina.getText());
+                Double valor3 = Double.valueOf(txtMontoDoc3Nomina.getText());
+                Double valor4 = Double.valueOf(txtMontoDoc4Nomina.getText());
+                Double valor5 = Double.valueOf(txtMontoDoc5Nomina.getText());
+                Double valor6 = Double.valueOf(txtMontoDoc6Nomina.getText());
+                Double valor7 = Double.valueOf(txtMontoDoc7Nomina.getText());
+                Double valor8 = Double.valueOf(txtMontoDoc8Nomina.getText());
+                Double valor9 = Double.valueOf(txtMontoDoc9Nomina.getText());
+                Double valor10 = Double.valueOf(txtMontoDoc10Nomina.getText());
+                Double valor11 = Double.valueOf(txtMontoDoc11Nomina.getText());
+                
+                int numeroDoc1Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc2Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc3Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc4Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc5Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc6Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc7Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc8Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc9Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc10Nomi= Integer.parseInt(txtDoc1Nomina.getText());
+                int numeroDoc11Nomi= Integer.parseInt(txtDoc1Nomina.getText());
 
 
 
@@ -1295,9 +1322,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
 
 
                    // Realizar la suma
-                int resultado = valor1  + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11;
+                Double resultado = valor1  + valor2 + valor3 + valor4 + valor5 + valor6 + valor7 + valor8 + valor9 + valor10 + valor11;
                 // Mostrar el resultado en el JTextField correspondiente
-                txtTotalFilaNomina.setText(Integer.toString(resultado));
+                txtTotalFilaNomina.setText(Double.toString(resultado));
             
     }//GEN-LAST:event_btnTotalizarNominaActionPerformed
 
