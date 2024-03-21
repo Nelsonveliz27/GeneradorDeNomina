@@ -313,7 +313,7 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
         };
         //Aca se coloca titulo a las columnas
         
-        String titulosProv[] = {"ID", "RUT", "NOMBRE", "NRO. DE CUENTA", "COD. BANCO", "EMAIL" };
+        String titulosProv[] = {"ID", "RUT", "NOMBRE", "NRO. DE CUENTA", "COD. BANCO", "EMAIL", "SUCURSAL" };
         modeloTable.setColumnIdentifiers(titulosProv);
         
         //traer los proveedores de la base de datos
@@ -323,7 +323,7 @@ public class ProvConsEdicElimProveedor extends javax.swing.JFrame {
         if (listaProveedores != null) {
             for (Proveedor prov : listaProveedores) {
                 Object[] object = {prov.getIdProv(), prov.getRutProv(), prov.getNombreProv(), 
-                prov.getNumeroCtaProv(),prov.getCodigoCtaProv(), prov.getEmailProv()};
+                prov.getNumeroCtaProv(),prov.getCodigoCtaProv(), prov.getEmailProv(), prov.getSucursalProv()};
                 
                 modeloTable.addRow(object);
             }

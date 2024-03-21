@@ -91,8 +91,8 @@ public class PortalProveedores extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnNuevoProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(bntConsEdiElimProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalirPortalProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSalirPortalProveedores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bntConsEdiElimProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -178,6 +178,7 @@ public class PortalProveedores extends javax.swing.JFrame {
 
     private void btnSalirPortalProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirPortalProveedoresActionPerformed
         dispose();
+        
     }//GEN-LAST:event_btnSalirPortalProveedoresActionPerformed
 
     
@@ -195,11 +196,6 @@ public class PortalProveedores extends javax.swing.JFrame {
     private javax.swing.JLabel ljlLogo1;
     // End of variables declaration//GEN-END:variables
 
-    private static class ProvConsEdicElim {
-
-        public ProvConsEdicElim() {
-        }
-    }
-
+   
   
 }

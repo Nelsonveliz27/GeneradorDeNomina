@@ -20,19 +20,21 @@ public class Proveedor implements Serializable {
     private int numeroCtaProv;
     private int codigoCtaProv;
     private String emailProv;
+    private String sucursalProv;
     
     //Contructor Vacio
     public Proveedor() {
     }
     //Contructor por Parametro
 
-    public Proveedor(int idProv, String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv) {
+    public Proveedor(int idProv, String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv, String sucursalProv) {
         this.idProv = idProv;
         this.rutProv = rutProv;
         this.nombreProv = nombreProv;
         this.numeroCtaProv = numeroCtaProv;
         this.codigoCtaProv = codigoCtaProv;
         this.emailProv = emailProv;
+        this.sucursalProv = sucursalProv;
     }
     
     //gatter y setter
@@ -83,6 +85,13 @@ public class Proveedor implements Serializable {
 
     public void setEmailProv(String emailProv) {
         this.emailProv = emailProv;
+    }
+    public String getSucursalProv() {
+        return sucursalProv;
+    }
+
+    public void setSucursalProv(String sucursalProv) {
+        this.sucursalProv = sucursalProv;
     }
     
     

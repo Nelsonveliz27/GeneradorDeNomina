@@ -58,6 +58,8 @@ public class ProvModificar extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btnSalirModificarProveedor = new javax.swing.JButton();
+        lblSucursal = new javax.swing.JLabel();
+        txtSucursalProv = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -109,6 +111,8 @@ public class ProvModificar extends javax.swing.JFrame {
             }
         });
 
+        lblSucursal.setText("SUCURSAL");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -120,28 +124,34 @@ public class ProvModificar extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(btnLimpiarNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSalirModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(45, 45, 45))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel3)
                                         .addComponent(jLabel4))
                                     .addComponent(jLabel1)
-                                    .addComponent(jLabel5))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtMailModifProveedor)
-                                    .addComponent(txtNroctaModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNombreModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCodCtaModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtRutModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(30, 30, 30))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)
-                                .addComponent(btnLimpiarNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSalirModificarProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45))))
+                                    .addComponent(jLabel5)
+                                    .addComponent(lblSucursal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(txtSucursalProv, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(24, 24, 24))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(txtMailModifProveedor)
+                                            .addComponent(txtNroctaModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtNombreModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCodCtaModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtRutModifProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(30, 30, 30))))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(ljlLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -198,7 +208,11 @@ public class ProvModificar extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtMailModifProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblSucursal)
+                            .addComponent(txtSucursalProv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -249,7 +263,7 @@ public class ProvModificar extends javax.swing.JFrame {
         String numeroCtaProvSt = (txtNroctaModifProveedor.getText());
         String codigoCtaProvSt = (txtCodCtaModifProveedor.getText());
         String emailProv = txtMailModifProveedor.getText();
-        
+        String sucursalProv = txtSucursalProv.getText();
         try{
             int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
         
@@ -265,9 +279,11 @@ public class ProvModificar extends javax.swing.JFrame {
                         mostrarMensaje("El campo CODIGO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");
         } else if (emailProv.trim().isEmpty()) {
             mostrarMensaje("El campo MAIL no puede ir vacio", "Error", "Intente de Nuevo");
+        }  else if (sucursalProv.trim().isEmpty()) {
+            mostrarMensaje("El campo SUCURSAL no puede ir vacio", "Error", "Intente de Nuevo");
         } else {
             
-                control.ModificarProveedor(prov, rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+                control.ModificarProveedor(prov, rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv, sucursalProv);
         
                 mostrarMensaje ("Edición realizado correctamente", "Info", "Modificación Exitosa");
         
@@ -291,6 +307,7 @@ public class ProvModificar extends javax.swing.JFrame {
         txtNroctaModifProveedor.setText("");
         txtCodCtaModifProveedor.setText("");
         txtMailModifProveedor.setText("");
+        txtSucursalProv.setText("");
     }//GEN-LAST:event_btnLimpiarNuevoProveedorActionPerformed
 
     private void btnSalirModificarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirModificarProveedorActionPerformed
@@ -326,12 +343,14 @@ public class ProvModificar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblSucursal;
     private javax.swing.JLabel ljlLogo;
     private javax.swing.JTextField txtCodCtaModifProveedor;
     private javax.swing.JTextField txtMailModifProveedor;
     private javax.swing.JTextField txtNombreModifProveedor;
     private javax.swing.JTextField txtNroctaModifProveedor;
     private javax.swing.JTextField txtRutModifProveedor;
+    private javax.swing.JTextField txtSucursalProv;
     // End of variables declaration//GEN-END:variables
 
     private void cargarDatosProv(int idPro) {
@@ -343,5 +362,6 @@ public class ProvModificar extends javax.swing.JFrame {
         txtNroctaModifProveedor.setText(String.valueOf(prov.getNumeroCtaProv()));
         txtCodCtaModifProveedor.setText(String.valueOf(prov.getCodigoCtaProv()));
         txtMailModifProveedor.setText(prov.getEmailProv());
+        txtSucursalProv.setText(prov.getSucursalProv());
     }
 }

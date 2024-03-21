@@ -7,6 +7,8 @@ package Interfaz;
 
 
 import ExportarExcell.ExportarJtabletoExcell;
+import Logica.Controladora;
+import Logica.Proveedor;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -18,8 +20,10 @@ import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 
 import javax.swing.JOptionPane;
 
@@ -32,10 +36,23 @@ import javax.swing.table.DefaultTableModel;
  */
 public class NomCrearNomina extends javax.swing.JFrame {
 
+    //con esto se accede a los metodos de la controladora
     
+    Controladora control = new Controladora();
+    ProvConsEdicElimProveedor tabla= new ProvConsEdicElimProveedor();
     PreparedStatement ps;
     
     ResultSet rs;
+     DefaultTableModel modeloTableProv = new DefaultTableModel() {
+            
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }  
+            
+            
+            
+        };
      DefaultTableModel modeloTableNomina = new DefaultTableModel() {
             
             @Override
@@ -166,6 +183,12 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jLabel6.setText("CORREO");
 
         jLabel7.setText("GLOSA");
+
+        txtRutNomina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRutNominaActionPerformed(evt);
+            }
+        });
 
         txtOpNomina.setText("3");
         txtOpNomina.addActionListener(new java.awt.event.ActionListener() {
@@ -645,74 +668,69 @@ public class NomCrearNomina extends javax.swing.JFrame {
         jPanelLayout.setHorizontalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
                             .addComponent(jLabel1)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(141, 141, 141)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtOpNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombreProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanelLayout.createSequentialGroup()
-                                .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(txtNombreProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtGlosaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+                    .addComponent(txtGlosaNomina, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                     .addComponent(txtEmailProvNomina))
-                .addGap(59, 59, 59))
+                .addGap(53, 53, 53))
+            .addComponent(jScrollPane2)
             .addGroup(jPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnModificarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnEliminarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(btnExportarAExcell, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanelLayout.createSequentialGroup()
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel2)
+                        .addGap(116, 116, 116)
+                        .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addComponent(btnAgregarFila, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(btnModificarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEliminarFilaNom, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnExportarAExcell, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(206, 206, 206))))
+                        .addGap(13, 13, 13)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
+                .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtEmailProvNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtGlosaNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelLayout.createSequentialGroup()
-                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(txtRutNomina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(jLabel6)
@@ -723,22 +741,26 @@ public class NomCrearNomina extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel7))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(12, 12, 12)
+                        .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel5)
+                                .addComponent(txtNumeroCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel3)
+                                .addComponent(txtCodigoCuentaProvNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregarFila)
-                    .addComponent(btnExportarAExcell)
                     .addComponent(btnModificarFilaNom)
-                    .addComponent(btnEliminarFilaNom))
-                .addGap(265, 265, 265))
+                    .addComponent(btnEliminarFilaNom)
+                    .addComponent(btnExportarAExcell))
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -746,14 +768,15 @@ public class NomCrearNomina extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -945,8 +968,30 @@ public class NomCrearNomina extends javax.swing.JFrame {
      
     
     }//GEN-LAST:event_btnAgregarFilaActionPerformed
-
+     private void conectarABaseDeDatos() {
+        java.sql.Connection cnx = null;
+        try
+            {
+                cnx = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/portalPagosKovacs?serverTimezone=UTC", "root", "admin1234");
+            }
+        catch (java.sql.SQLException ex)
+            {
+        System.out.println("SQLException: " + ex.getMessage());System.out.println("SQLState: " + ex.getSQLState());
+        System.out.println("VendorError: " + ex.getErrorCode());
+            }
+     }
+        
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ListadoProv listadoProv = new ListadoProv();
+        listadoProv.setDatos(txtRutNomina.getText());
+        listadoProv.setVisible(true);
+        /*String titulosProv[] = {"ID", "RUT", "NOMBRE", "NRO. DE CUENTA", "COD. BANCO", "EMAIL", "SUCURSAL" };
+        modeloTableProv.setColumnIdentifiers(titulosProv);//modeloTableProv
+        
+        //String sql = "Select * from proveedor";
+        
+        String [] registros = new String[7];
+        
         java.sql.Connection cnx = null;
         try
             {
@@ -957,24 +1002,41 @@ public class NomCrearNomina extends javax.swing.JFrame {
         System.out.println("VendorError: " + ex.getErrorCode());
         }
         
+        
+        
+        //traer los proveedores de la base de datos
+        //List <Proveedor> listaProveedores = control.traerProveedores();
+        
         try {
            
-            ps = cnx.prepareStatement("Select * from proveedor where RUTPROV=?");
+            ps = cnx.prepareStatement("Select * from proveedor where RUTPROV =?");
             ps.setString(1, txtRutNomina.getText());
             rs= ps.executeQuery();
             
             if(rs.next()) {
-                txtNombreProvNomina.setText(String.valueOf(rs.getString("NOMBREPROV")));
+                registros[0]=rs.getString("IDPROV");
+                registros[1]=rs.getString("RUTPROV");
+                registros[2]=rs.getString("NOMBREPROV");
+                registros[3]=rs.getString("CODIGOCTAPROV");
+                registros[4]=rs.getString("NUMEROCTAPROV");
+                registros[5]=rs.getString("EMAILPROV");
+                registros[6]=rs.getString("SUCURSALPROV");
+                modeloTableProv.addRow(registros);
+                tblListProv.setModel(modeloTableProv);
+                
+                
+                /*txtNombreProvNomina.setText(String.valueOf(rs.getString("NOMBREPROV")));
                 txtEmailProvNomina.setText(String.valueOf(rs.getString("EMAILPROV")));
                 txtNumeroCuentaProvNom.setText(String.valueOf(rs.getInt("NUMEROCTAPROV")));
                 txtCodigoCuentaProvNom.setText(String.valueOf(rs.getInt("CODIGOCTAPROV")));
-                
             }else{
                 JOptionPane.showMessageDialog(null, "No se encuentra el proveedor");
             }
         } catch (SQLException e) {
             System.out.println(" Error "+e);
-        }
+        }*/
+        
+    
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1109,6 +1171,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarFilaNomActionPerformed
 
     private void btnEliminarFilaNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarFilaNomActionPerformed
+      
+              
         DefaultTableModel modelo = (DefaultTableModel) tblDatosNomina.getModel();  
         int filaNom = tblDatosNomina.getSelectedRow();
         if (filaNom<0) {
@@ -1324,6 +1388,10 @@ public class NomCrearNomina extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btnTotalizarNominaMouseClicked
 
+    private void txtRutNominaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRutNominaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRutNominaActionPerformed
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1456,6 +1524,10 @@ public class NomCrearNomina extends javax.swing.JFrame {
     }
     
     public void mostrarMensaje (String mensaje, String tipo, String titulo) {
+    
+        
+        
+        
         JOptionPane optionPane = new JOptionPane(mensaje);
         if (tipo.equals("info")) {
             optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
@@ -1487,6 +1559,8 @@ public class NomCrearNomina extends javax.swing.JFrame {
                         montoDoc9Nomi+ montoDoc10Nomi+ montoDoc11Nomi);
         lblTotalNomina.setText(totalNomina);
     }*/
+
+    
  
     
     

@@ -47,6 +47,8 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btnSalirNuevoProveedor = new javax.swing.JButton();
+        lblSucursal = new javax.swing.JLabel();
+        txtSucursalProv = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,6 +100,8 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
             }
         });
 
+        lblSucursal.setText("SUCURSAL");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -114,20 +118,21 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1)
-                            .addComponent(jLabel5))
+                            .addComponent(jLabel5)
+                            .addComponent(lblSucursal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtNroctaNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombreNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCodCtaNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtRutNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtMailNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtMailNuevoProveedor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSucursalProv, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnGuardarNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,7 +185,11 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtMailNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblSucursal)
+                            .addComponent(txtSucursalProv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnGuardarNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnLimpiarNuevoProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,7 +205,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -218,6 +227,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
         String numeroCtaProvSt = (txtNroctaNuevoProveedor.getText());
         String codigoCtaProvSt = (txtCodCtaNuevoProveedor.getText());
         String emailProv = txtMailNuevoProveedor.getText();
+        String sucursalProv = txtSucursalProv.getText();
         
         try{
             int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
@@ -234,9 +244,11 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
                         mostrarMensaje("El campo CODIGO DE CUENTA no puede ir vacio", "Error", "Intente de Nuevo");
         } else if (emailProv.trim().isEmpty()) {
             mostrarMensaje("El campo MAIL no puede ir vacio", "Error", "Intente de Nuevo");
+        }  else if (sucursalProv.trim().isEmpty()) {
+            mostrarMensaje("El campo SUCURSAL no puede ir vacio", "Error", "Intente de Nuevo");
         } else {
             
-            control.GuardarNuevoProveedor(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv);
+            control.GuardarNuevoProveedor(rutProv, nombreProv, numeroCtaProv, codigoCtaProv, emailProv, sucursalProv);
             
             mostrarMensaje("Proveedor guardado con exito", "Info", "Provedor guarado");
             
@@ -246,6 +258,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
             txtNroctaNuevoProveedor.setText("");
             txtCodCtaNuevoProveedor.setText("");
             txtMailNuevoProveedor.setText("");
+            txtSucursalProv.setText("");
             }
         } catch (NumberFormatException e) {
         // Manejar el caso en el que la conversión a int no sea exitosa
@@ -272,6 +285,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
         txtNroctaNuevoProveedor.setText("");
         txtCodCtaNuevoProveedor.setText("");
         txtMailNuevoProveedor.setText("");
+        txtSucursalProv.setText("");
         
     }//GEN-LAST:event_btnLimpiarNuevoProveedorActionPerformed
 
@@ -295,12 +309,14 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblSucursal;
     private javax.swing.JLabel ljlLogo;
     private javax.swing.JTextField txtCodCtaNuevoProveedor;
     private javax.swing.JTextField txtMailNuevoProveedor;
     private javax.swing.JTextField txtNombreNuevoProveedor;
     private javax.swing.JTextField txtNroctaNuevoProveedor;
     private javax.swing.JTextField txtRutNuevoProveedor;
+    private javax.swing.JTextField txtSucursalProv;
     // End of variables declaration//GEN-END:variables
 }
 
