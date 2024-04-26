@@ -15,10 +15,11 @@ import javax.swing.table.DefaultTableModel;
  * @author nvelizl
  */
 public class ListadoProv extends javax.swing.JFrame {
+    private NomCrearNomina ventanaSecundaria;
     PreparedStatement ps;
     ResultSet rs;
     DefaultTableModel modeloTableProv = new DefaultTableModel() {
-            
+    private NomCrearNomina ventanaSecundaria;        
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -28,8 +29,10 @@ public class ListadoProv extends javax.swing.JFrame {
             
         };
     private String datos;
+    //NomCrearNomina aggProv = new NomCrearNomina();
     
     public ListadoProv() {
+        
         initComponents();
         
         
@@ -50,6 +53,7 @@ public class ListadoProv extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         lblDatosFiltro = new java.awt.Label();
+        button1 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -73,6 +77,13 @@ public class ListadoProv extends javax.swing.JFrame {
 
         jLabel7.setText("RUT:");
 
+        button1.setLabel("button1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -82,13 +93,12 @@ public class ListadoProv extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(285, 285, 285)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblDatosFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDatosFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95)
+                        .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 833, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -102,8 +112,9 @@ public class ListadoProv extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDatosFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                    .addComponent(lblDatosFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -128,6 +139,61 @@ public class ListadoProv extends javax.swing.JFrame {
         cargarTabla();
     }//GEN-LAST:event_formWindowOpened
 
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+          
+            //controlar que la table no este vacia
+            if (tblListProv3.getRowCount()> 0) {
+                int filaSeleccionada = tblListProv3.getSelectedRow();
+                //Sa valida que se haya seleccionado un registro
+                if (filaSeleccionada !=-1 ) {
+                    
+                    //int numColumnas = tblListProv3.getColumnCount();//obtengo la id del proveedor que deseo modificar
+                    //String[] datosFilat = new String[4];
+                    //Obtener Datos de la fila seleccionanda;
+                    //Object[] datosFilaS = new Object[6];
+                    
+                    String datosFilat1 = (String) tblListProv3.getValueAt(filaSeleccionada, 1);
+                    String datosFilat2 = (String) tblListProv3.getValueAt(filaSeleccionada, 2);
+                    String datosFilat3 = (String) tblListProv3.getValueAt(filaSeleccionada, 3);
+                    String datosFilat4 = (String) tblListProv3.getValueAt(filaSeleccionada, 4);
+                    String datosFilat5 = (String) tblListProv3.getValueAt(filaSeleccionada, 5);
+                    //Traerdatos datosFilat = new Traerdatos(datosFilat2, datosFilat3, datosFilat4, datosFilat5);
+                    Traerdatos traerdatos = new Traerdatos(datosFilat1, datosFilat2, datosFilat3, datosFilat4, datosFilat5);
+                            ventanaSecundaria.traeDatos(traerdatos);
+        //int idPro = Integer.parseInt(String.valueOf(tblListProv3.getValueAt(tblListProv3.getSelectedRow(), 0)));
+                    
+        
+        // Verificar si la ventana está abierta
+        //while (ventanaSecundaria != null && ventanaSecundaria.isVisible()) {
+            // Llamar al método público en VentanaSecundaria para actualizar el JTextField
+            
+           // ventanaSecundaria.traeDatos(traerdatos);
+             //        this.dispose();
+                     //   if (ventanaSecundaria.isVisible()) {
+                    
+                    if (ventanaSecundaria  != null){
+                       
+                       ventanaSecundaria.toFront();
+                       this.dispose();
+                    }
+                
+            }}
+    }//GEN-LAST:event_button1ActionPerformed
+    
+    
+    // Resto del código
+
+    // Método para establecer la instancia de NomCrearNomina
+    public void setVentanaSecundaria(NomCrearNomina ventanaSecundaria) {
+        this.ventanaSecundaria = ventanaSecundaria;
+    }
+
+    
+   
+    
+    
+        
+        
     public void setDatos(String datos){
         this.datos = datos;
         lblDatosFiltro.setText(datos);
@@ -184,33 +250,23 @@ public class ListadoProv extends javax.swing.JFrame {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "No se encuentra el proveedor");
         }
+        
+        
         };
+        public void enviarDatosMouseClicked(java.awt.event.MouseEvent evt){
+            
+        }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private java.awt.Button button1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JLabel lblDatos;
-    private javax.swing.JLabel lblDatos1;
-    private javax.swing.JLabel lblDatos2;
     private java.awt.Label lblDatosFiltro;
-    private javax.swing.JTable tblListProv;
-    private javax.swing.JTable tblListProv1;
-    private javax.swing.JTable tblListProv2;
     private javax.swing.JTable tblListProv3;
     // End of variables declaration//GEN-END:variables
+
+
 }

@@ -37,13 +37,13 @@ import javax.swing.table.DefaultTableModel;
 public class NomCrearNomina extends javax.swing.JFrame {
 
     //con esto se accede a los metodos de la controladora
-    
+    private static NomCrearNomina instancia;
     Controladora control = new Controladora();
     ProvConsEdicElimProveedor tabla= new ProvConsEdicElimProveedor();
     PreparedStatement ps;
+    Proveedor prov = new Proveedor();
     
-    ResultSet rs;
-     DefaultTableModel modeloTableProv = new DefaultTableModel() {
+    DefaultTableModel modeloTableProv = new DefaultTableModel() {
             
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -70,6 +70,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/kovacsLogo.png"));
         this.setIconImage(icono);
         this.setLocationRelativeTo(null);
+        
         
        
         
@@ -959,8 +960,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
     
     
     
+    
     }
-            
+           
     
     
     
@@ -980,11 +982,38 @@ public class NomCrearNomina extends javax.swing.JFrame {
         System.out.println("VendorError: " + ex.getErrorCode());
             }
      }
+    public static NomCrearNomina getInstance() {
+        if (instancia == null) {
+            instancia = new NomCrearNomina();
+        }
+        return instancia;
+    }
+     
+     
+     
+     public void traeDatos (Traerdatos traerdatos){
         
+    
+        //if (datosFilat > -1) {/Se setean los datos del id a la interfaz
+            txtRutNomina.setText(traerdatos.getDatosFilat1());
+            txtNombreProvNomina.setText(traerdatos.getDatosFilat2());
+            txtEmailProvNomina.setText(traerdatos.getDatosFilat5());
+            txtNumeroCuentaProvNom.setText(traerdatos.getDatosFilat4());
+            txtCodigoCuentaProvNom.setText(traerdatos.getDatosFilat3());
+            setVisible(true);
+            //txtSucursalProv.setText(prov.getSucursalProv());
+        //}    
+    
+    }    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ListadoProv listadoProv = new ListadoProv();
         listadoProv.setDatos(txtRutNomina.getText());
         listadoProv.setVisible(true);
+        
+        
+        listadoProv.setVentanaSecundaria(this); // Establece la instancia de NomCrearNomina
+        
+        
         /*String titulosProv[] = {"ID", "RUT", "NOMBRE", "NRO. DE CUENTA", "COD. BANCO", "EMAIL", "SUCURSAL" };
         modeloTableProv.setColumnIdentifiers(titulosProv);//modeloTableProv
         
@@ -1040,6 +1069,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    
     private void btnExportarAExcellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarAExcellActionPerformed
         ExportarJtabletoExcell objNom;
         
@@ -1538,6 +1568,13 @@ public class NomCrearNomina extends javax.swing.JFrame {
         JDialog dialog = optionPane.createDialog(titulo);
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);        
+    }
+    
+    private void abrirListadoProv() {
+        ListadoProv listadoProv = new ListadoProv();
+        listadoProv.setVentanaSecundaria(this); // Establece la instancia de NomCrearNomina
+        listadoProv.setDatos("datos"); // Aquí puedes establecer cualquier dato que necesites
+        listadoProv.setVisible(true); // Abre ListadoProv
     }
 
     /*private void updateLabel() {

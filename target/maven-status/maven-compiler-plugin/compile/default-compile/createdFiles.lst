@@ -42,6 +42,7 @@ Interfaz\ProvNuevoProveedor$3.class
 exceptions\PreexistingEntityException.class
 Interfaz\NomCrearNomina$28.class
 Logica\Proveedor_.class
+Interfaz\Traerdatos.class
 Persistencia\ProveedorJpaController.class
 Interfaz\ProvNuevoProveedor.class
 Logica\Controladora.class
@@ -74,6 +75,7 @@ Interfaz\NomCrearNomina$11.class
 Interfaz\ProvModificar$2.class
 Interfaz\NomCrearNomina$31.class
 ExportarExcell\ExportarJtabletoExcell.class
+Interfaz\ListadoProv$3.class
 Interfaz\NomCrearNomina$26.class
 Interfaz\NomCrearNomina$35.class
 Interfaz\ProvNuevoProveedor$1.class
