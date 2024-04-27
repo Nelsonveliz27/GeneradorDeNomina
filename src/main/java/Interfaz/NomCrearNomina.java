@@ -18,12 +18,9 @@ import java.io.IOException;
 
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
+
 
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 import javax.swing.JOptionPane;
 
@@ -843,9 +840,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     String emailProvNom  =  txtEmailProvNomina.getText();
     String glosaNom  =  txtGlosaNomina.getText();
     
-    if (glosaNom.trim().isEmpty()) {
-        mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");
-    } else {}
+    
     //String totalNom = montoDoc1Nom + montoDoc2Nom+ montoDoc3Nom+ montoDoc4Nom+ 
       //                  montoDoc5Nom+ montoDoc6Nom+ montoDoc7Nom+ montoDoc8Nom +
         //                montoDoc9Nom+ montoDoc10Nom+ montoDoc11Nom;
@@ -877,7 +872,9 @@ public class NomCrearNomina extends javax.swing.JFrame {
         Double montoDoc11Nomi= Double.valueOf(montoDoc11Nom);
         Double totalNominaf= Double.valueOf(totalNomina);
         
-        if (totalNominaf > 0 ) {
+        if (glosaNom.trim().isEmpty()) {
+        mostrarMensaje("El campo GLOSA no puede ir vacio", "Error", "Intente de Nuevo");
+        } else  if (totalNominaf > 0 ) {
             
             
             //Aqui creo una fila con la cantidad de columnas que necesito para mi tabla, y
@@ -954,7 +951,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             txtTotalFilaNomina.setText("0");
         } else {
             
-            mostrarMensaje("Nomina no puede ir en 0", "Info", "Agregado");
+            mostrarMensaje("Nomina no puede ir en 0", "Info", "Intente de nuevo");
         }
     }catch (NumberFormatException e){
     

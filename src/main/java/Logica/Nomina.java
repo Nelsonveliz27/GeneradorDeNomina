@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Logica;
 
 /**
@@ -9,6 +6,8 @@ package Logica;
  * @author nvelizl
  */
 public class Nomina {
+    
+    //Atributos de la clase Nomina
     
     public String rutProvNom;
     public String nombreProvNom;
@@ -41,9 +40,10 @@ public class Nomina {
     public String emailProvNom;
     public String glosaNom;
 
+    //Constructor Vacio
     public Nomina() {
     }
-
+    //Constructor Lleno
     public Nomina(String rutProvNom, String nombreProvNom, int modalidadProvNom, int nroCtaProvNom, int codCtaProvNom, int numeroDoc1Nom, Double montoDoc1Nom, int numeroDoc2Nom, Double montoDoc2Nom, int numeroDoc3Nom, Double montoDoc3Nom, int numeroDoc4Nom, Double montoDoc4Nom, int numeroDoc5Nom, Double montoDoc5Nom, int numeroDoc6Nom, Double montoDoc6Nom, int numeroDoc7Nom, Double montoDoc7Nom, int numeroDoc8Nom, Double montoDoc8Nom, int numeroDoc9Nom, Double montoDoc9Nom, int numeroDoc10Nom, Double montoDoc10Nom, int numeroDoc11Nom, Double montoDoc11Nom, Double totalNomina, String emailProvNom, String glosaNom) {
         this.rutProvNom = rutProvNom;
         this.nombreProvNom = nombreProvNom;
@@ -77,7 +77,7 @@ public class Nomina {
         this.glosaNom = glosaNom;
     }
 
-
+    //Getter y Setters
     public String getRutProvNom() {
         return rutProvNom;
     }

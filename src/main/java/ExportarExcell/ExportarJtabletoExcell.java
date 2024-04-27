@@ -54,7 +54,7 @@ public class ExportarJtabletoExcell {
                     Row fila = hoja.createRow(filaInicio);
                     filaInicio++;
                     for (int c = 0; c < t.getColumnCount(); c++) {
-                        Cell celda = fila.createCell(c);
+                        /*Cell celda = fila.createCell(c);
                         if (t.getValueAt(f, c) instanceof Double) {
                             celda.setCellValue(Double.parseDouble(t.getValueAt(f, c).toString()));
                         } else if (t.getValueAt(f, c) instanceof Float) {
@@ -63,6 +63,17 @@ public class ExportarJtabletoExcell {
                             celda.setCellValue(Integer.parseInt(t.getValueAt(f, c).toString()));
                         }else {
                             celda.setCellValue(String.valueOf(t.getValueAt(f, c)));
+                        }*/
+                        Cell celda = fila.createCell(c);
+                        Object valor = t.getValueAt(f, c);
+                        if (valor instanceof Double) {
+                            celda.setCellValue(((Double) valor).intValue()); // Cast a int
+                        } else if (valor instanceof Float) {
+                            celda.setCellValue(((Float) valor).intValue()); // Cast a int
+                        } else if (valor instanceof Integer) {
+                            celda.setCellValue((Integer) valor); // Sin necesidad de parsear
+                        } else {
+                            celda.setCellValue(String.valueOf(valor));
                         }
                     }
                 }

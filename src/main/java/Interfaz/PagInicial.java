@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Interfaz;
 
 import java.awt.Image;
@@ -17,7 +14,9 @@ public class PagInicial extends javax.swing.JFrame {
     public PagInicial() {
         
         initComponents();
-        this.setTitle("PORTAL DE PAGOS KOVACS, SPA.");
+        
+        //Diseño de la Pestaña, parte superior.
+        this.setTitle("PORTAL DE PAGOS KOVACS, SPA.");  //Titulo de la pestaña
         Image icono =Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/kovacsLogo.png"));
         this.setIconImage(icono);
         this.setLocationRelativeTo(null);
@@ -61,7 +60,7 @@ public class PagInicial extends javax.swing.JFrame {
                 btnNominasActionPerformed(evt);
             }
         });
-        jPanel2.add(btnNominas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 43));
+        jPanel2.add(btnNominas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 110, 43));
 
         btnSalirApp.setText("SALIR");
         btnSalirApp.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -79,9 +78,9 @@ public class PagInicial extends javax.swing.JFrame {
                 btnProveedoresActionPerformed(evt);
             }
         });
-        jPanel2.add(btnProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 127, 43));
+        jPanel2.add(btnProveedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 127, 43));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 137, 550, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 137, 540, 60));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("PORTAL DE PAGOS");
@@ -91,19 +90,19 @@ public class PagInicial extends javax.swing.JFrame {
         jPanel1.add(ljlLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 170, 60));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chevrolet.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 120, 60));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 120, 60));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/nisaan.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 220, 120, 80));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 120, 80));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/toyotaLogo.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 70));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
