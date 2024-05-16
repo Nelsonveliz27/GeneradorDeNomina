@@ -17,7 +17,7 @@ public class Proveedor implements Serializable {
     
     private String rutProv;
     private String nombreProv;
-    private int numeroCtaProv;
+    private long numeroCtaProv;
     private int codigoCtaProv;
     private String emailProv;
     private String sucursalProv;
@@ -27,7 +27,7 @@ public class Proveedor implements Serializable {
     }
     //Contructor por Parametro
 
-    public Proveedor(int idProv, String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv, String sucursalProv) {
+    public Proveedor(int idProv, String rutProv, String nombreProv, long numeroCtaProv, int codigoCtaProv, String emailProv, String sucursalProv) {
         this.idProv = idProv;
         this.rutProv = rutProv;
         this.nombreProv = nombreProv;
@@ -63,11 +63,11 @@ public class Proveedor implements Serializable {
         this.nombreProv = nombreProv;
     }
 
-    public int getNumeroCtaProv() {
+    public long getNumeroCtaProv() {
         return numeroCtaProv;
     }
 
-    public void setNumeroCtaProv(int numeroCtaProv) {
+    public void setNumeroCtaProv(long numeroCtaProv) {
         this.numeroCtaProv = numeroCtaProv;
     }
 

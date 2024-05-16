@@ -12,7 +12,7 @@ public class Nomina {
     public String rutProvNom;
     public String nombreProvNom;
     public int modalidadProvNom;
-    public int nroCtaProvNom;
+    public long nroCtaProvNom;
     public int codCtaProvNom;
     public int numeroDoc1Nom;
     public Double montoDoc1Nom;
@@ -44,7 +44,7 @@ public class Nomina {
     public Nomina() {
     }
     //Constructor Lleno
-    public Nomina(String rutProvNom, String nombreProvNom, int modalidadProvNom, int nroCtaProvNom, int codCtaProvNom, int numeroDoc1Nom, Double montoDoc1Nom, int numeroDoc2Nom, Double montoDoc2Nom, int numeroDoc3Nom, Double montoDoc3Nom, int numeroDoc4Nom, Double montoDoc4Nom, int numeroDoc5Nom, Double montoDoc5Nom, int numeroDoc6Nom, Double montoDoc6Nom, int numeroDoc7Nom, Double montoDoc7Nom, int numeroDoc8Nom, Double montoDoc8Nom, int numeroDoc9Nom, Double montoDoc9Nom, int numeroDoc10Nom, Double montoDoc10Nom, int numeroDoc11Nom, Double montoDoc11Nom, Double totalNomina, String emailProvNom, String glosaNom) {
+    public Nomina(String rutProvNom, String nombreProvNom, int modalidadProvNom, long nroCtaProvNom, int codCtaProvNom, int numeroDoc1Nom, Double montoDoc1Nom, int numeroDoc2Nom, Double montoDoc2Nom, int numeroDoc3Nom, Double montoDoc3Nom, int numeroDoc4Nom, Double montoDoc4Nom, int numeroDoc5Nom, Double montoDoc5Nom, int numeroDoc6Nom, Double montoDoc6Nom, int numeroDoc7Nom, Double montoDoc7Nom, int numeroDoc8Nom, Double montoDoc8Nom, int numeroDoc9Nom, Double montoDoc9Nom, int numeroDoc10Nom, Double montoDoc10Nom, int numeroDoc11Nom, Double montoDoc11Nom, Double totalNomina, String emailProvNom, String glosaNom) {
         this.rutProvNom = rutProvNom;
         this.nombreProvNom = nombreProvNom;
         this.modalidadProvNom = modalidadProvNom;
@@ -102,11 +102,11 @@ public class Nomina {
         this.modalidadProvNom = modalidadProvNom;
     }
 
-    public int getNroCtaProvNom() {
+    public long getNroCtaProvNom() {
         return nroCtaProvNom;
     }
 
-    public void setNroCtaProvNom(int nroCtaProvNom) {
+    public void setNroCtaProvNom(long nroCtaProvNom) {
         this.nroCtaProvNom = nroCtaProvNom;
     }
 

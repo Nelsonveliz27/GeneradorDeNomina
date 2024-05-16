@@ -234,7 +234,7 @@ public class ProvNuevoProveedor extends javax.swing.JFrame {
         String sucursalProv = txtSucursalProv.getText();
         
         try{
-            int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
+            long numeroCtaProv = Long.parseLong(numeroCtaProvSt);
         
             int codigoCtaProv = Integer.parseInt(codigoCtaProvSt);
               

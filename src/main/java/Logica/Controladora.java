@@ -12,7 +12,7 @@ public class Controladora {
     
     ControladoraPersistencia controlpersis = new ControladoraPersistencia();
 
-    public void GuardarNuevoProveedor(String rutProv, String nombreProv, int numeroCtaProvInt, int codigoCtaProvInt, String emailProv, String sucursalProv) {
+    public void GuardarNuevoProveedor(String rutProv, String nombreProv, long numeroCtaProvInt, int codigoCtaProvInt, String emailProv, String sucursalProv) {
         
         Proveedor prov = new Proveedor();
         prov.setRutProv(rutProv);
@@ -37,7 +37,7 @@ public class Controladora {
         return controlpersis.traerProveedores(idPro);
     }
 
-    public void ModificarProveedor(Proveedor prov,String rutProv, String nombreProv, int numeroCtaProv, int codigoCtaProv, String emailProv, String sucursalProv ) {
+    public void ModificarProveedor(Proveedor prov,String rutProv, String nombreProv, long numeroCtaProv, int codigoCtaProv, String emailProv, String sucursalProv ) {
         
         prov.setRutProv(rutProv);
         prov.setNombreProv(nombreProv);

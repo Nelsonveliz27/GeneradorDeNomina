@@ -265,7 +265,7 @@ public class ProvModificar extends javax.swing.JFrame {
         String emailProv = txtMailModifProveedor.getText();
         String sucursalProv = txtSucursalProv.getText();
         try{
-            int numeroCtaProv = Integer.parseInt(numeroCtaProvSt);
+            long numeroCtaProv = Long.parseLong(numeroCtaProvSt);
         
             int codigoCtaProv = Integer.parseInt(codigoCtaProvSt);
               

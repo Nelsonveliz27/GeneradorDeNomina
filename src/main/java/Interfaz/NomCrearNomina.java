@@ -788,7 +788,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
     String rutProvNom = txtRutNomina.getText(); 
     String nombreProvNom = txtNombreProvNomina.getText();
     int modalidadProvNom = Integer.parseInt(txtOpNomina.getText());
-    int nroCtaProvNom = Integer.parseInt(txtNumeroCuentaProvNom.getText());
+    long nroCtaProvNom = Long.parseLong(txtNumeroCuentaProvNom.getText());
     int codCtaProvNom =  Integer.parseInt(txtCodigoCuentaProvNom.getText());
     
     //Documentos y Valores de la nomina
@@ -1097,7 +1097,7 @@ public class NomCrearNomina extends javax.swing.JFrame {
             int filaNom = tblDatosNomina.getSelectedRow();
             
             int modalidadProvNom = Integer.parseInt(txtOpNomina.getText());
-            int nroCtaProvNom = Integer.parseInt(txtNumeroCuentaProvNom.getText());
+            long nroCtaProvNom = Long.parseLong(txtNumeroCuentaProvNom.getText());
             int codCtaProvNom =  Integer.parseInt(txtCodigoCuentaProvNom.getText());
             Double montoDoc1Nomi= Double.valueOf(txtMontoDoc1Nomina.getText());
             Double montoDoc2Nomi= Double.valueOf(txtMontoDoc2Nomina.getText());
